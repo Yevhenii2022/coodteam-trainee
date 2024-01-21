@@ -1,0 +1,52 @@
+.about {
+	padding: 100px 0 264px 0;
+	border-radius: 0px 0px 30px 30px;
+	background-color: $black-text;
+
+	&__wrapper {
+		margin-top: 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 30px 0 30px;
+		transition: $transition;
+
+		svg {
+			fill: $white;
+			cursor: pointer;
+			transition: $transition;
+
+			&:hover,
+			&:focus {
+				scale: 1.3;
+			}
+		}
+
+		svg:first-child:hover,
+		svg:first-child:focus {
+			fill: #16a901;
+		}
+		svg:nth-child(2):hover,
+		svg:nth-child(2):focus {
+			fill: #0077b5;
+		}
+		svg:nth-child(5):hover,
+		svg:nth-child(5):focus {
+			fill: #0057ff;
+		}
+		svg:nth-child(6):hover,
+		svg:nth-child(6):focus {
+			fill: #e14a84;
+		}
+		svg:nth-child(7):hover,
+		svg:nth-child(7):focus {
+			svg {
+				fill: #f73b2d;
+			}
+		}
+		svg:nth-child(8):hover,
+		svg:nth-child(8):focus {
+			fill: #e83942;
+		}
+	}
+}

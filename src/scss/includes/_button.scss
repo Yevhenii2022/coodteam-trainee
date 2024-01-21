@@ -1,0 +1,41 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 13.5px 42px;
+	width: fit-content;
+	cursor: pointer;
+	background-color: $white;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 20px;
+	transition: $transition;
+
+	svg {
+		width: 11px;
+		height: 9px;
+		padding: 7.5px 6.8px;
+		fill: none;
+		stroke: $white;
+		background-color: $green;
+		border-radius: 50%;
+		transition: $transition;
+	}
+
+	&:hover,
+	&:focus {
+		color: $white;
+		background-color: $green;
+
+		svg {
+			stroke: $green;
+			background-color: $white;
+		}
+	}
+
+	&:active {
+		background-color: $green-active;
+	}
+}
