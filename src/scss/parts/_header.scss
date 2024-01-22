@@ -2,6 +2,7 @@
 	position: fixed;
 	top: 30px;
 	width: 100%;
+	z-index: 99;
 
 	&__wrapper {
 		display: flex;
@@ -13,8 +14,10 @@
 	}
 
 	&__logo {
-		width: 94px;
-		height: 28px;
+		svg {
+			width: 94px;
+			height: 28px;
+		}
 	}
 
 	&__contacts {

@@ -3,35 +3,35 @@
   \*****************************************************************************************************************************************/
 @font-face {
   font-display: swap;
-  font-family: "Montserrat";
+  font-family: "Montserrat400";
   font-style: normal;
   font-weight: 400;
   src: url("../../fonts/montserrat-v26-latin-regular.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-regular.woff") format("woff"), url("../../fonts/montserrat-v26-latin-regular.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
-  font-family: "Montserrat";
+  font-family: "Montserrat500";
   font-style: normal;
   font-weight: 500;
   src: url("../../fonts/montserrat-v26-latin-500.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-500.woff") format("woff"), url("../../fonts/montserrat-v26-latin-500.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
-  font-family: "Montserrat";
+  font-family: "Montserrat600";
   font-style: normal;
   font-weight: 600;
   src: url("../../fonts/montserrat-v26-latin-600.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-600.woff") format("woff"), url("../../fonts/montserrat-v26-latin-600.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
-  font-family: "Montserrat";
+  font-family: "Montserrat700";
   font-style: normal;
   font-weight: 700;
   src: url("../../fonts/montserrat-v26-latin-700.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-700.woff") format("woff"), url("../../fonts/montserrat-v26-latin-700.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
-  font-family: "Montserrat";
+  font-family: "Montserrat800";
   font-style: normal;
   font-weight: 800;
   src: url("../../fonts/montserrat-v26-latin-800.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-800.woff") format("woff"), url("../../fonts/montserrat-v26-latin-800.ttf") format("truetype");
@@ -90,6 +90,7 @@
   position: fixed;
   top: 30px;
   width: 100%;
+  z-index: 99;
 }
 .header__wrapper {
   display: flex;
@@ -99,7 +100,7 @@
   border-radius: 30px;
   background-color: #000;
 }
-.header__logo {
+.header__logo svg {
   width: 94px;
   height: 28px;
 }
@@ -157,6 +158,102 @@
   line-height: 1.4;
 }
 
+.portfolio {
+  padding: 200px 0 100px 0;
+  border-radius: 30px 30px 0px 0px;
+  background-color: #101010;
+}
+.portfolio__slider {
+  margin-top: 60px;
+}
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.portfolio__link--border {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.portfolio__link:hover .portfolio__link--border, .portfolio__link:focus .portfolio__link--border {
+  border: 1px solid #368b3c;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__link:hover img, .portfolio__link:focus img {
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__link:hover svg circle, .portfolio__link:focus svg circle {
+  fill: #368b3c;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__link:hover svg path, .portfolio__link:focus svg path {
+  stroke: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__image {
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.portfolio__description {
+  padding-left: 11.5px;
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio__description svg {
+  width: 44px;
+  height: 43px;
+}
+.portfolio__name {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 700;
+}
+.portfolio__excerpt {
+  width: 170px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.clients {
+  padding: 100px 0 100px 0;
+  position: relative;
+  background-color: #101010;
+}
+.clients__slider {
+  margin-top: 60px;
+}
+.clients__image {
+  display: block;
+  width: 264px;
+  height: 517px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+
+.clients__swiper-pagination {
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.clients__swiper-pagination--span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+
+.clients__swiper-pagination--span.swiper-pagination-bullet-active {
+  background: #368b3c;
+}
+
 .about {
   padding: 100px 0 264px 0;
   border-radius: 0px 0px 30px 30px;
@@ -169,6 +266,43 @@
   align-items: center;
   padding: 0 30px 0 30px;
   transition: all 0.3s ease-in-out;
+}
+.about__wrapper-item {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.about__wrapper-item svg {
+  transition: all 0.3s ease-in-out;
+}
+.about__wrapper-item svg:first-child {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.about__wrapper-item svg:last-child {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transform: scale(0.8333) translate(-6px, -6px);
+  transform-origin: center;
+}
+.about__wrapper-item:hover, .about__wrapper-item:focus {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.about__wrapper-item:hover svg:first-child, .about__wrapper-item:focus svg:first-child {
+  opacity: 0;
+}
+.about__wrapper-item:hover svg:last-child, .about__wrapper-item:focus svg:last-child {
+  opacity: 1;
 }
 .about__wrapper svg {
   fill: #fff;
@@ -185,6 +319,10 @@
 .about__wrapper svg:nth-child(2):hover,
 .about__wrapper svg:nth-child(2):focus {
   fill: #0077b5;
+}
+.about__wrapper svg:nth-child(4):hover g path,
+.about__wrapper svg:nth-child(4):focus g path {
+  fill: url(#gradient-insta);
 }
 .about__wrapper svg:nth-child(5):hover,
 .about__wrapper svg:nth-child(5):focus {

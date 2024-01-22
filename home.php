@@ -13,13 +13,143 @@ get_header();
         <p class="hero__text">
           COOD — стратегічний партнер по розробці програмного забезпечення
         </p>
-        <a class="button" href="#">
+        <a class="button hero__button" href="#">
           <span>Зв’язатись з нами</span>
           <svg>
             <path d="M.838 4.69H9.85M6.432.96l3.73 3.73-3.73 3.729" />
           </svg>
         </a>
       </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Наше портфоліо</h2>
+
+      <div class="portfolio__slider swiper ">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <a href="#" class="portfolio__link">
+              <div class="portfolio__link--border">
+                <img class="portfolio__image" src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-1.webp" alt="portfolio__image">
+              </div>
+              <div class="portfolio__description">
+                <div>
+                  <h3 class="portfolio__name">
+                    Lesgroup
+                  </h3>
+                  <p class="portfolio__excerpt">
+                    Постачальник палива
+                  </p>
+                </div>
+                <svg fill="none">
+                  <circle cx="22" cy="21.5" r="21.5" fill="#fff" />
+                  <path stroke="#368B3C" d="M13.284 20.919h16.851M23.743 13.946l6.973 6.973-6.973 6.973" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="portfolio__link">
+              <div class="portfolio__link--border">
+                <img class="portfolio__image" src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-2.webp" alt="portfolio__image">
+              </div>
+              <div class="portfolio__description">
+                <div>
+                  <h3 class="portfolio__name">
+                    Donum
+                  </h3>
+                  <p class="portfolio__excerpt">
+                    Магазин подарункових сертифікатів
+                  </p>
+                </div>
+                <svg fill="none">
+                  <circle cx="22" cy="21.5" r="21.5" fill="#fff" />
+                  <path stroke="#368B3C" d="M13.284 20.919h16.851M23.743 13.946l6.973 6.973-6.973 6.973" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="portfolio__link">
+              <div class="portfolio__link--border">
+                <img class="portfolio__image" src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-3.webp" alt="portfolio__image">
+              </div>
+              <div class="portfolio__description">
+                <div>
+                  <h3 class="portfolio__name">
+                    Dbuy
+                  </h3>
+                  <p class="portfolio__excerpt">
+                    Імпортер кліматичного обладнання
+                  </p>
+                </div>
+                <svg fill="none">
+                  <circle cx="22" cy="21.5" r="21.5" fill="#fff" />
+                  <path stroke="#368B3C" d="M13.284 20.919h16.851M23.743 13.946l6.973 6.973-6.973 6.973" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="portfolio__link">
+              <div class="portfolio__link--border">
+                <img class="portfolio__image" src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-2.webp" alt="portfolio__image">
+              </div>
+              <div class="portfolio__description">
+                <div>
+                  <h3 class="portfolio__name">
+                    Donum
+                  </h3>
+                  <p class="portfolio__excerpt">
+                    Магазин подарункових сертифікатів
+                  </p>
+                </div>
+                <svg fill="none">
+                  <circle cx="22" cy="21.5" r="21.5" fill="#fff" />
+                  <path stroke="#368B3C" d="M13.284 20.919h16.851M23.743 13.946l6.973 6.973-6.973 6.973" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <!-- <div class="clients__swiper-pagination"></div> -->
+
+    </div>
+  </section>
+
+  <section class="clients">
+    <div class="container">
+      <h2 class="section-title">Що про нас кажуть клієнти</h2>
+
+      <div class="clients__slider swiper ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="clients__image" src="wp-content/themes/pointer-theme/assets/images/clients/clients-img-1.webp" alt="clients__image">
+          </div>
+          <div class="swiper-slide">
+            <img class="clients__image" src="wp-content/themes/pointer-theme/assets/images/clients/clients-img-2.webp" alt="clients__image">
+          </div>
+          <div class="swiper-slide">
+            <img class="clients__image" src="wp-content/themes/pointer-theme/assets/images/clients/clients-img-3.webp" alt="clients__image">
+          </div>
+          <div class="swiper-slide">
+            <img class="clients__image" src="wp-content/themes/pointer-theme/assets/images/clients/clients-img-4.webp" alt="clients__image">
+          </div>
+          <div class="swiper-slide">
+            <img class="clients__image" src="wp-content/themes/pointer-theme/assets/images/clients/clients-img-2.webp" alt="clients__image">
+          </div>
+        </div>
+      </div>
+      <div class="clients__swiper-pagination"></div>
+
     </div>
   </section>
 
@@ -42,20 +172,43 @@ get_header();
           </defs>
         </svg>
 
-        <svg width="50" height="50">
-          <g>
-            <path d="M25 0C11.204 0 0 11.204 0 25s11.204 25 25 25 25-11.204 25-25S38.796 0 25 0Zm0 43.889C14.537 43.889 6.019 35.462 6.019 25A19.012 19.012 0 0 1 25 6.019 19.012 19.012 0 0 1 43.981 25C43.89 35.462 35.462 43.889 25 43.889Z" />
-            <path fill="#fff" d="M21.945 28.611c1.759 1.574 4.352 1.574 6.019 0V21.39c-1.759-1.574-4.352-1.574-6.019 0v7.222Zm3.056-16.481c-3.426 0-6.666 1.389-9.073 3.796l4.258 4.259a6.761 6.761 0 0 1 9.63 0l4.26-4.259C31.667 13.52 28.427 12.13 25 12.13Z" />
-            <path fill="#fff" d="M29.815 29.815a6.762 6.762 0 0 1-9.63 0l-4.259 4.259c5 5 13.149 5 18.149 0l-4.259-4.26h-.001ZM24.995 50c.185-2.963-1.574-5.649-4.445-6.574-7.408-1.852-12.963-7.87-14.166-15.37h12.592c-1.018-1.945-1.018-4.166 0-6.019H6.384a18.907 18.907 0 0 1 21.575-15.74 18.538 18.538 0 0 1 6.851 2.5c2.593 1.573 6.019.925 7.87-1.482-9.722-9.723-25.555-9.723-35.37 0-9.815 9.722-9.815 25.555 0 35.37C12.033 47.315 18.329 50 24.995 50Z" />
-          </g>
-          <defs>
-            <clipPath>
-              <path d="M0 0h50v50H0z" />
-            </clipPath>
-          </defs>
-        </svg>
+        <div class="about__wrapper-item">
+          <svg>
+            <g>
+              <path d="M25 0C11.204 0 0 11.204 0 25s11.204 25 25 25 25-11.204 25-25S38.796 0 25 0Zm0 43.889C14.537 43.889 6.019 35.462 6.019 25A19.012 19.012 0 0 1 25 6.019 19.012 19.012 0 0 1 43.981 25C43.89 35.462 35.462 43.889 25 43.889Z" />
+              <path d="M21.945 28.611c1.759 1.574 4.352 1.574 6.019 0V21.39c-1.759-1.574-4.352-1.574-6.019 0v7.222Zm3.056-16.481c-3.426 0-6.666 1.389-9.073 3.796l4.258 4.259a6.761 6.761 0 0 1 9.63 0l4.26-4.259C31.667 13.52 28.427 12.13 25 12.13Z" />
+              <path d="M29.815 29.815a6.762 6.762 0 0 1-9.63 0l-4.259 4.259c5 5 13.149 5 18.149 0l-4.259-4.26h-.001ZM24.995 50c.185-2.963-1.574-5.649-4.445-6.574-7.408-1.852-12.963-7.87-14.166-15.37h12.592c-1.018-1.945-1.018-4.166 0-6.019H6.384a18.907 18.907 0 0 1 21.575-15.74 18.538 18.538 0 0 1 6.851 2.5c2.593 1.573 6.019.925 7.87-1.482-9.722-9.723-25.555-9.723-35.37 0-9.815 9.722-9.815 25.555 0 35.37C12.033 47.315 18.329 50 24.995 50Z" />
+            </g>
+            <defs>
+              <clipPath>
+                <path d="M0 0h50v50H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg>
+            <g>
+              <path fill="#DCDCDC" d="M30.442 0c-16.556 0-30 13.444-30 30 0 16.556 13.444 30 30 30 16.555 0 30-13.444 30-30 0-16.556-13.445-30-30-30Zm0 52.666C17.887 52.666 7.664 42.555 7.664 30A22.815 22.815 0 0 1 30.442 7.223 22.815 22.815 0 0 1 53.219 30c-.11 12.555-10.222 22.666-22.777 22.666Z" />
+              <g fill="#F7AD1A">
+                <path d="M26.776 34.333c2.11 1.889 5.221 1.889 7.222 0v-8.667c-2.11-1.888-5.223-1.888-7.222 0v8.667Zm3.667-19.777c-4.111 0-8 1.666-10.888 4.555l5.11 5.11a8.115 8.115 0 0 1 11.556 0l5.11-5.11c-2.888-2.889-6.776-4.555-10.888-4.555Z" />
+                <path d="M36.22 35.778a8.115 8.115 0 0 1-11.556 0l-5.11 5.11c6 6 15.778 6 21.778 0l-5.11-5.11h-.002ZM30.436 60c.222-3.555-1.889-6.779-5.334-7.889-8.89-2.223-15.555-9.444-17-18.444h15.111c-1.222-2.334-1.222-5 0-7.222H8.103a22.689 22.689 0 0 1 25.89-18.89 22.245 22.245 0 0 1 8.22 3c3.112 1.889 7.223 1.112 9.445-1.777C39.99-2.89 20.992-2.89 9.214 8.778c-11.778 11.667-11.778 30.666 0 42.444C14.88 56.778 22.436 60 30.436 60Z" />
+              </g>
+            </g>
+            <defs>
+              <clipPath>
+                <path d="M.442 0h60v60h-60z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
 
         <svg width="50" height="50">
+          <defs>
+            <linearGradient id="gradient-insta" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(254,178,0)" />
+              <stop offset="61%" style="stop-color:rgb(216,17,151)" />
+              <stop offset="100%" style="stop-color:rgb(117,52,252)" />
+            </linearGradient>
+          </defs>
           <g>
             <path d="M41.345 11.655a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM25 33.333a8.333 8.333 0 1 1 0-16.666 8.333 8.333 0 0 1 0 16.666Zm0-21.17c-7.09 0-12.838 5.747-12.838 12.837S17.91 37.838 25 37.838c7.09 0 12.838-5.748 12.838-12.838 0-7.09-5.748-12.838-12.838-12.838Zm0-7.658c6.675 0 7.466.025 10.102.145 2.438.112 3.761.519 4.642.861 1.167.454 2 .996 2.875 1.87.875.875 1.416 1.708 1.87 2.875.342.881.75 2.205.861 4.642.12 2.637.146 3.427.146 10.103 0 6.675-.026 7.466-.146 10.102-.111 2.437-.518 3.761-.86 4.642-.455 1.167-.996 2-1.871 2.875s-1.708 1.416-2.875 1.87c-.88.342-2.205.75-4.642.86-2.636.121-3.427.146-10.102.146-6.676 0-7.466-.025-10.102-.145-2.438-.111-3.762-.519-4.643-.861-1.166-.454-2-.995-2.874-1.87-.875-.875-1.417-1.708-1.87-2.875-.343-.88-.75-2.205-.861-4.642-.12-2.637-.146-3.427-.146-10.102 0-6.676.025-7.466.146-10.103.11-2.437.518-3.76.86-4.642.454-1.167.996-2 1.87-2.874.875-.875 1.708-1.417 2.875-1.87.881-.343 2.205-.75 4.643-.862 2.636-.12 3.427-.145 10.102-.145ZM25 0c-6.79 0-7.641.029-10.307.15-2.661.122-4.479.545-6.069 1.163-1.644.638-3.038 1.493-4.428 2.883-1.39 1.39-2.245 2.784-2.883 4.428C.695 10.214.272 12.032.15 14.693.03 17.359 0 18.21 0 25c0 6.79.029 7.641.15 10.307.122 2.661.545 4.478 1.163 6.069.638 1.644 1.493 3.038 2.883 4.428 1.39 1.39 2.784 2.244 4.428 2.883 1.59.619 3.408 1.041 6.069 1.163C17.359 49.97 18.21 50 25 50c6.79 0 7.641-.029 10.307-.15 2.661-.122 4.478-.544 6.069-1.163 1.644-.639 3.038-1.493 4.428-2.883 1.39-1.39 2.244-2.784 2.883-4.428.619-1.59 1.041-3.408 1.163-6.069C49.97 32.641 50 31.79 50 25c0-6.79-.029-7.641-.15-10.307-.122-2.661-.544-4.479-1.163-6.069-.639-1.644-1.493-3.038-2.883-4.428-1.39-1.39-2.784-2.244-4.428-2.883C39.786.695 37.968.272 35.307.15 32.641.03 31.79 0 25 0Z" clip-rule="evenodd" />
           </g>

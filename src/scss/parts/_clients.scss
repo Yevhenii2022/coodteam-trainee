@@ -1,0 +1,36 @@
+.clients {
+	padding: 100px 0 100px 0;
+	position: relative;
+	background-color: $black-text;
+
+	&__slider {
+		margin-top: 60px;
+	}
+
+	&__image {
+		display: block;
+		width: 264px;
+		height: 517px;
+		object-fit: cover;
+		border-radius: 10px;
+		border: 1px solid $white;
+		overflow: hidden;
+	}
+}
+
+.clients__swiper-pagination {
+	margin: 30px auto 0;
+	display: flex;
+	justify-content: center;
+}
+
+.clients__swiper-pagination--span.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.1);
+	opacity: 1;
+}
+
+.clients__swiper-pagination--span.swiper-pagination-bullet-active {
+	background: $green;
+}
