@@ -13,12 +13,14 @@ get_header();
         <p class="hero__text">
           COOD — стратегічний партнер по розробці програмного забезпечення
         </p>
-        <a class="button hero__button" href="#">
-          <span>Зв’язатись з нами</span>
-          <svg>
-            <path d="M.838 4.69H9.85M6.432.96l3.73 3.73-3.73 3.729" />
-          </svg>
-        </a>
+        <div class="hero--size">
+          <a class="button hero__button" href="#">
+            <span>Зв’язатись з нами</span>
+            <svg>
+              <path d="M.838 4.69H9.85M6.432.96l3.73 3.73-3.73 3.729" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>

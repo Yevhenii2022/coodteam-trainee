@@ -14,7 +14,14 @@
 		object-fit: cover;
 		border-radius: 10px;
 		border: 1px solid $white;
+		cursor: pointer;
 		overflow: hidden;
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			border: 1px solid $green;
+		}
 	}
 }
 

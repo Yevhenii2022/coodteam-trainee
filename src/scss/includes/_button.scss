@@ -5,6 +5,7 @@
 	gap: 10px;
 	padding: 13.5px 42px;
 	width: fit-content;
+	height: fit-content;
 	cursor: pointer;
 	background-color: $white;
 	font-size: 14px;
@@ -28,8 +29,10 @@
 	&:focus {
 		color: $white;
 		background-color: $green;
+		padding: 16px 42px;
 
 		svg {
+			padding: 10px 9px;
 			stroke: $green;
 			background-color: $white;
 		}

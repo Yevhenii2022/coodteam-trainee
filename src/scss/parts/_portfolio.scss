@@ -17,26 +17,23 @@
 		&--border {
 			border: 1px solid transparent;
 			border-radius: 50%;
+			transition: $transition;
 		}
 
 		&:hover,
 		&:focus {
 			.portfolio__link--border {
 				border: 1px solid $green;
-				transition: $transition;
 			}
 			img {
 				transform: scale(0.8);
-				transition: $transition;
 			}
 			svg {
 				circle {
 					fill: $green;
-					transition: $transition;
 				}
 				path {
 					stroke: $white;
-					transition: $transition;
 				}
 			}
 		}
@@ -49,6 +46,7 @@
 		object-fit: cover;
 		border-radius: 50%;
 		overflow: hidden;
+		transition: $transition;
 	}
 
 	&__description {
@@ -59,6 +57,13 @@
 		svg {
 			width: 44px;
 			height: 43px;
+
+			circle {
+				transition: $transition;
+			}
+			path {
+				transition: $transition;
+			}
 		}
 	}
 

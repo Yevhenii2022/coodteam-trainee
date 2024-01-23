@@ -56,6 +56,7 @@
   gap: 10px;
   padding: 13.5px 42px;
   width: fit-content;
+  height: fit-content;
   cursor: pointer;
   background-color: #fff;
   font-size: 14px;
@@ -77,8 +78,10 @@
 .button:hover, .button:focus {
   color: #fff;
   background-color: #368b3c;
+  padding: 16px 42px;
 }
 .button:hover svg, .button:focus svg {
+  padding: 10px 9px;
   stroke: #368b3c;
   background-color: #fff;
 }
@@ -157,6 +160,9 @@
   font-weight: 500;
   line-height: 1.4;
 }
+.hero--size {
+  height: 60px;
+}
 
 .portfolio {
   padding: 200px 0 100px 0;
@@ -174,28 +180,26 @@
 .portfolio__link--border {
   border: 1px solid transparent;
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__link:hover .portfolio__link--border, .portfolio__link:focus .portfolio__link--border {
   border: 1px solid #368b3c;
-  transition: all 0.3s ease-in-out;
 }
 .portfolio__link:hover img, .portfolio__link:focus img {
   transform: scale(0.8);
-  transition: all 0.3s ease-in-out;
 }
 .portfolio__link:hover svg circle, .portfolio__link:focus svg circle {
   fill: #368b3c;
-  transition: all 0.3s ease-in-out;
 }
 .portfolio__link:hover svg path, .portfolio__link:focus svg path {
   stroke: #fff;
-  transition: all 0.3s ease-in-out;
 }
 .portfolio__image {
   display: block;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__description {
   padding-left: 11.5px;
@@ -205,6 +209,12 @@
 .portfolio__description svg {
   width: 44px;
   height: 43px;
+}
+.portfolio__description svg circle {
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__description svg path {
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__name {
   color: #fff;
@@ -234,7 +244,12 @@
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #fff;
+  cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.clients__image:hover, .clients__image:focus {
+  border: 1px solid #368b3c;
 }
 
 .clients__swiper-pagination {
