@@ -1,45 +1,46 @@
 .header {
 	position: fixed;
-	top: 30px;
+	top: 2rem;
 	width: 100%;
 	z-index: 99;
 
 	&__wrapper {
 		display: flex;
-		padding: 20px 30px;
+		padding: 1.333rem 2rem;
 		justify-content: space-between;
 		align-items: center;
-		border-radius: 30px;
+		border-radius: 2rem;
 		background-color: $black;
+		transition: $transition;
 	}
 
 	&__logo {
 		svg {
-			width: 94px;
-			height: 28px;
+			width: 6.267rem;
+			height: 1.867rem;
 		}
 	}
 
 	&__contacts {
 		display: flex;
-		gap: 60px;
+		gap: 4rem;
 	}
 
 	&__list {
 		display: flex;
-		gap: 40px;
+		gap: 2.667rem;
 		align-items: center;
 	}
 
 	&__list-icon {
-		width: 28px;
-		height: 27px;
+		width: 1.867rem;
+		height: 1.8rem;
 		fill: $white;
 		transition: $transition;
 
 		&--size {
-			width: 33px;
-			height: 34px;
+			width: 2.2rem;
+			height: 2.267rem;
 		}
 
 		&:hover,

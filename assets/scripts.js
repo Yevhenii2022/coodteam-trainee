@@ -79,7 +79,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _par
   \*******************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tconst header = document.querySelector(\".header__wrapper\");\r\n\tconst headerButton = document.querySelector(\".header__button\");\r\n\tconst listIcons = document.querySelectorAll(\".header__list-icon\");\r\n\r\n\tlistIcons.forEach(function (listIcon) {\r\n\t\tlistIcon.addEventListener(\"mouseenter\", function () {\r\n\t\t\theader.style.height = \"4rem\";\r\n\t\t});\r\n\r\n\t\tlistIcon.addEventListener(\"mouseleave\", function () {\r\n\t\t\theader.style.height = \"3.333rem\";\r\n\t\t});\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseenter\", function () {\r\n\t\theader.style.height = \"4rem\";\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseleave\", function () {\r\n\t\theader.style.height = \"3.333rem\";\r\n\t});\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
 
 /***/ }),
 

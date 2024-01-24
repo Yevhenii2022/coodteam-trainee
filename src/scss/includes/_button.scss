@@ -2,22 +2,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
-	padding: 13.5px 42px;
+	gap: 0.667rem;
+	padding: 0.9rem 2.8rem;
 	width: fit-content;
 	height: fit-content;
 	cursor: pointer;
 	background-color: $white;
-	font-size: 14px;
+	font-size: 0.933rem;
 	font-weight: 500;
 	text-transform: uppercase;
-	border-radius: 20px;
+	border-radius: 1.333rem;
 	transition: $transition;
 
 	svg {
-		width: 11px;
-		height: 9px;
-		padding: 7.5px 6.8px;
+		width: 0.733rem;
+		height: 0.6rem;
+		padding: 0.5rem 0.453rem;
 		fill: none;
 		stroke: $white;
 		background-color: $green;
@@ -29,10 +29,10 @@
 	&:focus {
 		color: $white;
 		background-color: $green;
-		padding: 16px 42px;
+		padding: 1.067rem 2.8rem;
 
 		svg {
-			padding: 10px 9px;
+			padding: 0.667rem 0.6rem;
 			stroke: $green;
 			background-color: $white;
 		}
