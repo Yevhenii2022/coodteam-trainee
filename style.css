@@ -205,7 +205,6 @@ html {
   width: 21.867rem;
   height: 21.867rem;
   object-fit: cover;
-  border-radius: 50%;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border: 0.067rem solid transparent;
@@ -213,7 +212,9 @@ html {
   transition: all 0.3s ease-in-out;
 }
 .portfolio__image img {
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 .portfolio__description {
   padding-left: 0.767rem;
@@ -301,20 +302,20 @@ html {
     padding-left: 0.667rem;
   }
 }
-.about__slide {
+.about__socials .about__slide {
   width: fit-content;
   min-height: 4rem;
 }
 @media (max-width: 1025px) {
-  .about__slide {
+  .about__socials .about__slide {
     width: auto;
   }
 }
-.about__slide svg {
+.about__socials .about__slide svg {
   transition: all 0.3s ease-in-out;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
 }
-.about__slide svg:hover, .about__slide svg:focus {
+.about__socials .about__slide svg:hover, .about__socials .about__slide svg:focus {
   scale: 1.3;
   filter: none;
 }

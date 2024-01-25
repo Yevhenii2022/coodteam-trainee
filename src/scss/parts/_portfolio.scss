@@ -41,15 +41,16 @@
 		width: 21.867rem;
 		height: 21.867rem;
 		object-fit: cover;
-		border-radius: 50%;
 		overflow: hidden;
 		transition: $transition;
 		border: 0.067rem solid transparent;
 		border-radius: 50%;
 		transition: $transition;
-		// transform: perspective(66.667rem);
+		// perspective: (66.667rem);
 		img {
+			border-radius: 50%;
 			transition: $transition;
+			overflow: hidden;
 		}
 	}
 

@@ -35,7 +35,7 @@ get_header();
 
           <a href="#" class="swiper-slide portfolio__link">
             <div class="portfolio__image">
-              <img class="" src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-1.webp" alt="portfolio__image">
+              <img src="wp-content/themes/pointer-theme/assets/images/portfolio/portfolio-img-1.webp" alt="portfolio__image">
             </div>
             <div class="portfolio__description">
               <div>
@@ -155,7 +155,7 @@ get_header();
       <h2 class="section-title">Читайте про нас</h2>
 
       <div class="about__slider swiper">
-        <div class="about__socials swiper-wrapper">
+        <div class="about__socials  swiper-wrapper">
 
           <a class="about__slide swiper-slide" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 50" width="4.267rem" height="2.667rem">

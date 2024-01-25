@@ -11,25 +11,25 @@
 			justify-content: inherit;
 			padding-left: 0.667rem;
 		}
-	}
 
-	&__slide {
-		width: fit-content;
-		min-height: 4rem;
+		.about__slide {
+			width: fit-content;
+			min-height: 4rem;
 
-		@include media(tablet) {
-			width: auto;
-		}
+			@include media(tablet) {
+				width: auto;
+			}
 
-		svg {
-			transition: $transition;
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
-				brightness(101%) contrast(101%);
+			svg {
+				transition: $transition;
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
+					brightness(101%) contrast(101%);
 
-			&:hover,
-			&:focus {
-				scale: 1.3;
-				filter: none;
+				&:hover,
+				&:focus {
+					scale: 1.3;
+					filter: none;
+				}
 			}
 		}
 	}
