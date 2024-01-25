@@ -3,36 +3,25 @@
 	border-radius: 0 0 2rem 2rem;
 	background-color: $black-text;
 
-	&__wrapper {
+	&__socials {
+		display: flex;
+		justify-content: space-around;
 		margin-top: 6.667rem;
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
-		padding: 0 2rem 0 2rem;
-		transition: $transition;
+	}
+
+	&__slide {
+		width: auto !important;
+		min-height: 4rem;
 
 		svg {
-			fill: $white;
-			cursor: pointer;
 			transition: $transition;
-			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-				brightness(102%) contrast(102%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
+				brightness(101%) contrast(101%);
 
 			&:hover,
 			&:focus {
 				scale: 1.3;
 				filter: none;
-			}
-		}
-	}
-
-	&__icon {
-		transition: $transition;
-		&:hover,
-		&:focus {
-			svg {
-				filter: none;
-				fill: #f73b2d;
 			}
 		}
 	}
