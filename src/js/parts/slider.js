@@ -17,20 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	var portfolio = new Swiper(".portfolio__slider", {
-		slidesPerView: 4,
+		slidesPerView: 3.5,
 		spaceBetween: 53,
 		loop: true,
-		speef: 1000,
+		speed: 1000,
 		keyboard: {
 			enabled: true,
 		},
 	});
 
 	var clients = new Swiper(".clients__slider", {
-		slidesPerView: 5,
+		slidesPerView: 4.5,
 		spaceBetween: 24,
 		loop: true,
-		speef: 1000,
+		speed: 1000,
 		keyboard: {
 			enabled: true,
 		},

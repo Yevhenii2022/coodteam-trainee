@@ -3,31 +3,29 @@
 	border-radius: 2rem 2rem 0rem 0rem;
 	background-color: $black-text;
 
+	&__container {
+		margin: 0 0 0 9.321rem;
+	}
+
 	&__slider {
 		margin-top: 4rem;
 	}
 
 	&__link {
-		// width: 328px;
-		// height: 328px;
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 
-		&--border {
-			border: 0.067rem solid transparent;
-			border-radius: 50%;
-			transition: $transition;
-		}
-
 		&:hover,
 		&:focus {
-			.portfolio__link--border {
+			.portfolio__image {
 				border: 0.067rem solid $green;
+				overflow: hidden;
+				img {
+					transform: scale(0.8);
+				}
 			}
-			img {
-				transform: scale(0.8);
-			}
+
 			svg {
 				circle {
 					fill: $green;
@@ -40,13 +38,19 @@
 	}
 
 	&__image {
-		display: block;
-		// width: 328px;
-		// height: 328px;
+		width: 21.867rem;
+		height: 21.867rem;
 		object-fit: cover;
 		border-radius: 50%;
 		overflow: hidden;
 		transition: $transition;
+		border: 0.067rem solid transparent;
+		border-radius: 50%;
+		transition: $transition;
+		// transform: perspective(66.667rem);
+		img {
+			transition: $transition;
+		}
 	}
 
 	&__description {
@@ -55,7 +59,7 @@
 		justify-content: space-between;
 
 		svg {
-			width: 2.933rem;
+			width: 2.867rem;
 			height: 2.867rem;
 
 			circle {

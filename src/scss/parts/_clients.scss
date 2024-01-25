@@ -3,24 +3,32 @@
 	position: relative;
 	background-color: $black-text;
 
+	&__container {
+		margin: 0 0 0 9.321rem;
+	}
+
 	&__slider {
 		margin-top: 4rem;
 	}
 
 	&__image {
-		display: block;
-		width: 17.6rem;
-		height: 34.467rem;
-		object-fit: cover;
-		border-radius: 0.667rem;
-		border: 0.067rem solid $white;
-		cursor: pointer;
-		overflow: hidden;
-		transition: $transition;
+		img {
+			display: block;
+			width: 17.6rem;
+			height: 34.467rem;
+			border-radius: 0.667rem;
+			border: 0.067rem solid $white;
+			cursor: pointer;
+			transition: $transition;
+			object-fit: cover;
+			overflow: hidden;
+		}
 
 		&:hover,
 		&:focus {
-			border: 0.067rem solid $green;
+			img {
+				border: 0.067rem solid $green;
+			}
 		}
 	}
 }

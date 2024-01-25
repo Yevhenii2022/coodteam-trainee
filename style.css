@@ -67,27 +67,29 @@ html {
   font-weight: 500;
   text-transform: uppercase;
   border-radius: 1.333rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .button svg {
-  width: 0.733rem;
-  height: 0.6rem;
-  padding: 0.5rem 0.453rem;
-  fill: none;
-  stroke: #fff;
-  background-color: #368b3c;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+  width: 1.533rem;
+  height: 1.533rem;
+  transition: all 1.3s ease-in-out;
+}
+.button svg circle {
+  transition: all 1.3s ease-in-out;
+}
+.button svg path {
+  transition: all 1.3s ease-in-out;
 }
 .button:hover, .button:focus {
   color: #fff;
   background-color: #368b3c;
-  padding: 1.067rem 2.8rem;
+  padding: 1.233rem 2.8rem;
 }
-.button:hover svg, .button:focus svg {
-  padding: 0.667rem 0.6rem;
+.button:hover svg circle, .button:focus svg circle {
+  fill: #fff;
+}
+.button:hover svg path, .button:focus svg path {
   stroke: #368b3c;
-  background-color: #fff;
 }
 .button:active {
   background-color: #4a9f50;
@@ -106,7 +108,7 @@ html {
   align-items: center;
   border-radius: 2rem;
   background-color: #000;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .header__logo svg {
   width: 6.267rem;
@@ -125,7 +127,7 @@ html {
   width: 1.867rem;
   height: 1.8rem;
   fill: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .header__list-icon--size {
   width: 2.2rem;
@@ -175,6 +177,9 @@ html {
   border-radius: 2rem 2rem 0rem 0rem;
   background-color: #101010;
 }
+.portfolio__container {
+  margin: 0 0 0 9.321rem;
+}
 .portfolio__slider {
   margin-top: 4rem;
 }
@@ -183,15 +188,11 @@ html {
   flex-direction: column;
   gap: 2rem;
 }
-.portfolio__link--border {
-  border: 0.067rem solid transparent;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio__link:hover .portfolio__link--border, .portfolio__link:focus .portfolio__link--border {
+.portfolio__link:hover .portfolio__image, .portfolio__link:focus .portfolio__image {
   border: 0.067rem solid #368b3c;
+  overflow: hidden;
 }
-.portfolio__link:hover img, .portfolio__link:focus img {
+.portfolio__link:hover .portfolio__image img, .portfolio__link:focus .portfolio__image img {
   transform: scale(0.8);
 }
 .portfolio__link:hover svg circle, .portfolio__link:focus svg circle {
@@ -201,11 +202,18 @@ html {
   stroke: #fff;
 }
 .portfolio__image {
-  display: block;
+  width: 21.867rem;
+  height: 21.867rem;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
+  border: 0.067rem solid transparent;
+  border-radius: 50%;
+  transition: all 1.3s ease-in-out;
+}
+.portfolio__image img {
+  transition: all 1.3s ease-in-out;
 }
 .portfolio__description {
   padding-left: 0.767rem;
@@ -213,14 +221,14 @@ html {
   justify-content: space-between;
 }
 .portfolio__description svg {
-  width: 2.933rem;
+  width: 2.867rem;
   height: 2.867rem;
 }
 .portfolio__description svg circle {
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .portfolio__description svg path {
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .portfolio__name {
   color: #fff;
@@ -240,21 +248,24 @@ html {
   position: relative;
   background-color: #101010;
 }
+.clients__container {
+  margin: 0 0 0 9.321rem;
+}
 .clients__slider {
   margin-top: 4rem;
 }
-.clients__image {
+.clients__image img {
   display: block;
   width: 17.6rem;
   height: 34.467rem;
-  object-fit: cover;
   border-radius: 0.667rem;
   border: 0.067rem solid #fff;
   cursor: pointer;
+  transition: all 1.3s ease-in-out;
+  object-fit: cover;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
 }
-.clients__image:hover, .clients__image:focus {
+.clients__image:hover img, .clients__image:focus img {
   border: 0.067rem solid #368b3c;
 }
 
@@ -283,12 +294,12 @@ html {
 .about__wrapper {
   margin-top: 6.667rem;
   padding: 0 2rem 0 2rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .about__wrapper svg {
   fill: #fff;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 .about__wrapper svg:hover, .about__wrapper svg:focus {
@@ -296,7 +307,7 @@ html {
   filter: none;
 }
 .about__icon {
-  transition: all 0.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
 }
 .about__icon:hover svg, .about__icon:focus svg {
   filter: none;
