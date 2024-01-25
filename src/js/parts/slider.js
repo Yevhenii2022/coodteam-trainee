@@ -42,4 +42,23 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		},
 	});
+
+	if (window.innerWidth < 1025) {
+		var about = new Swiper(".about__slider", {
+			slidesPerView: 4,
+			loop: true,
+			speed: 1000,
+			keyboard: {
+				enabled: true,
+			},
+
+			pagination: {
+				el: ".about__swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="about__swiper-pagination--span ' + className + '"></span>';
+				},
+			},
+		});
+	}
 });

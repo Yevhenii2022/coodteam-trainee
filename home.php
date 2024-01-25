@@ -268,7 +268,7 @@ get_header();
 
         </div>
       </div>
-      <!-- <div class="clients__swiper-pagination"></div> -->
+      <div class="about__swiper-pagination"></div>
 
     </div>
   </section>

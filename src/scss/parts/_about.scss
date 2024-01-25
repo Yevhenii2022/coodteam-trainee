@@ -4,14 +4,22 @@
 	background-color: $black-text;
 
 	&__socials {
-		display: flex;
 		justify-content: space-around;
 		margin-top: 6.667rem;
+
+		@include media(tablet) {
+			justify-content: inherit;
+			padding-left: 0.667rem;
+		}
 	}
 
 	&__slide {
-		width: auto !important;
+		width: fit-content;
 		min-height: 4rem;
+
+		@include media(tablet) {
+			width: auto;
+		}
 
 		svg {
 			transition: $transition;
@@ -25,4 +33,25 @@
 			}
 		}
 	}
+}
+
+.about__swiper-pagination {
+	margin: 2rem auto 0;
+	display: flex;
+	justify-content: center;
+
+	@media (min-width: 1025px) {
+		margin: 0;
+	}
+}
+
+.about__swiper-pagination--span.swiper-pagination-bullet {
+	width: 0.533rem;
+	height: 0.533rem;
+	background: rgba(255, 255, 255, 0.1);
+	opacity: 1;
+}
+
+.about__swiper-pagination--span.swiper-pagination-bullet-active {
+	background: $green;
 }

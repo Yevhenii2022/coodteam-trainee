@@ -67,18 +67,18 @@ html {
   font-weight: 500;
   text-transform: uppercase;
   border-radius: 1.333rem;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .button svg {
   width: 1.533rem;
   height: 1.533rem;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .button svg circle {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .button svg path {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .button:hover, .button:focus {
   color: #fff;
@@ -108,7 +108,7 @@ html {
   align-items: center;
   border-radius: 2rem;
   background-color: #000;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .header__logo svg {
   width: 6.267rem;
@@ -127,7 +127,7 @@ html {
   width: 1.867rem;
   height: 1.8rem;
   fill: #fff;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .header__list-icon--size {
   width: 2.2rem;
@@ -207,13 +207,13 @@ html {
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border: 0.067rem solid transparent;
   border-radius: 50%;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__image img {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__description {
   padding-left: 0.767rem;
@@ -225,10 +225,10 @@ html {
   height: 2.867rem;
 }
 .portfolio__description svg circle {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__description svg path {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__name {
   color: #fff;
@@ -261,7 +261,7 @@ html {
   border-radius: 0.667rem;
   border: 0.067rem solid #fff;
   cursor: pointer;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   object-fit: cover;
   overflow: hidden;
 }
@@ -292,19 +292,51 @@ html {
   background-color: #101010;
 }
 .about__socials {
-  display: flex;
   justify-content: space-around;
   margin-top: 6.667rem;
 }
+@media (max-width: 1025px) {
+  .about__socials {
+    justify-content: inherit;
+    padding-left: 0.667rem;
+  }
+}
 .about__slide {
-  width: auto !important;
+  width: fit-content;
   min-height: 4rem;
 }
+@media (max-width: 1025px) {
+  .about__slide {
+    width: auto;
+  }
+}
 .about__slide svg {
-  transition: all 1.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
 }
 .about__slide svg:hover, .about__slide svg:focus {
   scale: 1.3;
   filter: none;
+}
+
+.about__swiper-pagination {
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1025px) {
+  .about__swiper-pagination {
+    margin: 0;
+  }
+}
+
+.about__swiper-pagination--span.swiper-pagination-bullet {
+  width: 0.533rem;
+  height: 0.533rem;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+
+.about__swiper-pagination--span.swiper-pagination-bullet-active {
+  background: #368b3c;
 }
