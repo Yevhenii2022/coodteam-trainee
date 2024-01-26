@@ -3,10 +3,6 @@
 	border-radius: 2rem 2rem 0rem 0rem;
 	background-color: $black-text;
 
-	&__container {
-		margin: 0 0 0 9.321rem;
-	}
-
 	&__slider {
 		margin-top: 4rem;
 	}
@@ -38,19 +34,20 @@
 	}
 
 	&__image {
-		width: 21.867rem;
-		height: 21.867rem;
+		min-width: 21.867rem;
+		min-height: 21.867rem;
 		object-fit: cover;
 		overflow: hidden;
 		transition: $transition;
 		border: 0.067rem solid transparent;
 		border-radius: 50%;
 		transition: $transition;
-		// perspective: (66.667rem);
+
 		img {
 			border-radius: 50%;
 			transition: $transition;
 			overflow: hidden;
+			perspective: 66.667rem;
 		}
 	}
 

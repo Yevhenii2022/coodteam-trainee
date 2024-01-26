@@ -45,8 +45,21 @@ html {
   margin: 0 auto;
   padding: 0 1.333rem;
 }
+.container--left {
+  margin: 0 0 0 9.321rem;
+  max-width: none;
+  padding: 0;
+}
 
-.section-title {
+.main__title {
+  margin-bottom: 1.333rem;
+  max-width: 56rem;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.section__title {
   color: #fff;
   font-size: 2.667rem;
   font-weight: 600;
@@ -83,7 +96,11 @@ html {
 .button:hover, .button:focus {
   color: #fff;
   background-color: #368b3c;
-  padding: 1.233rem 2.8rem;
+  padding: 1.067rem 2.8rem;
+}
+.button:hover svg, .button:focus svg {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .button:hover svg circle, .button:focus svg circle {
   fill: #fff;
@@ -102,6 +119,7 @@ html {
   z-index: 99;
 }
 .header__wrapper {
+  height: 3.333rem;
   display: flex;
   padding: 1.333rem 2rem;
   justify-content: space-between;
@@ -148,13 +166,6 @@ html {
   flex-direction: column;
   justify-content: center;
 }
-.hero__title {
-  margin-bottom: 1.333rem;
-  max-width: 56rem;
-  color: #fff;
-  font-size: 4rem;
-  font-weight: 800;
-}
 .hero__text {
   max-width: 25.333rem;
   display: flex;
@@ -176,9 +187,6 @@ html {
   padding: 13.333rem 0 6.667rem 0;
   border-radius: 2rem 2rem 0rem 0rem;
   background-color: #101010;
-}
-.portfolio__container {
-  margin: 0 0 0 9.321rem;
 }
 .portfolio__slider {
   margin-top: 4rem;
@@ -202,8 +210,8 @@ html {
   stroke: #fff;
 }
 .portfolio__image {
-  width: 21.867rem;
-  height: 21.867rem;
+  min-width: 21.867rem;
+  min-height: 21.867rem;
   object-fit: cover;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -215,6 +223,7 @@ html {
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  perspective: 66.667rem;
 }
 .portfolio__description {
   padding-left: 0.767rem;
@@ -248,9 +257,6 @@ html {
   padding: 6.667rem 0 6.667rem 0;
   position: relative;
   background-color: #101010;
-}
-.clients__container {
-  margin: 0 0 0 9.321rem;
 }
 .clients__slider {
   margin-top: 4rem;
@@ -299,12 +305,14 @@ html {
 @media (max-width: 1025px) {
   .about__socials {
     justify-content: inherit;
-    padding-left: 0.667rem;
   }
 }
 .about__socials .about__slide {
   width: fit-content;
-  min-height: 4rem;
+  min-height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1025px) {
   .about__socials .about__slide {

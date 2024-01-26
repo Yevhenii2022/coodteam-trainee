@@ -6,4 +6,9 @@ html {
 	max-width: 77.333rem;
 	margin: 0 auto;
 	padding: 0 1.333rem;
+	&--left {
+		margin: 0 0 0 9.321rem;
+		max-width: none;
+		padding: 0;
+	}
 }

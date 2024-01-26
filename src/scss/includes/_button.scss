@@ -30,9 +30,11 @@
 	&:focus {
 		color: $white;
 		background-color: $green;
-		padding: 1.233rem 2.8rem;
+		padding: 1.067rem 2.8rem;
 
 		svg {
+			width: 1.8rem;
+			height: 1.8rem;
 			circle {
 				fill: $white;
 			}

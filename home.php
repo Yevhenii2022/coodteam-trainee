@@ -9,7 +9,7 @@ get_header();
   <section class="hero">
     <div class="container">
       <div class="hero__wrapper">
-        <h1 class="hero__title">Розробка конверсійних сайтів під ключ</h1>
+        <h1 class="main__title">Розробка конверсійних сайтів під ключ</h1>
         <p class="hero__text">
           COOD — стратегічний партнер по розробці програмного забезпечення
         </p>
@@ -27,8 +27,8 @@ get_header();
   </section>
 
   <section class="portfolio">
-    <div class="portfolio__container">
-      <h2 class="section-title">Наше портфоліо</h2>
+    <div class="container container--left">
+      <h2 class="portfolio__title section__title">Наше портфоліо</h2>
 
       <div class="portfolio__slider swiper">
         <div class="swiper-wrapper">
@@ -121,9 +121,9 @@ get_header();
   </section>
 
   <section class="clients">
-    <div class="clients__container">
+    <div class="container container--left">
       <div class="clients__wrapper">
-        <h2 class="section-title">Що про нас кажуть клієнти</h2>
+        <h2 class="clients__title section__title">Що про нас кажуть клієнти</h2>
 
         <div class="clients__slider swiper ">
           <div class="swiper-wrapper">
@@ -152,7 +152,7 @@ get_header();
 
   <section class="about">
     <div class="container">
-      <h2 class="section-title">Читайте про нас</h2>
+      <h2 class="about__title section__title">Читайте про нас</h2>
 
       <div class="about__slider swiper">
         <div class="about__socials  swiper-wrapper">
