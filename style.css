@@ -67,6 +67,7 @@ html {
 }
 
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,17 +76,29 @@ html {
   width: fit-content;
   height: fit-content;
   cursor: pointer;
-  background-color: #fff;
   font-size: 0.933rem;
   font-weight: 500;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  z-index: 0;
   border-radius: 1.333rem;
   transition: all 0.3s ease-in-out;
+}
+.button span {
+  z-index: 1;
 }
 .button svg {
   width: 1.533rem;
   height: 1.533rem;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 .button svg circle {
   transition: all 0.3s ease-in-out;
@@ -95,12 +108,13 @@ html {
 }
 .button:hover, .button:focus {
   color: #fff;
+}
+.button:hover::before, .button:focus::before {
+  height: 4rem;
   background-color: #368b3c;
-  padding: 1.067rem 2.8rem;
 }
 .button:hover svg, .button:focus svg {
-  width: 1.8rem;
-  height: 1.8rem;
+  scale: 1.17;
 }
 .button:hover svg circle, .button:focus svg circle {
   fill: #fff;
@@ -108,7 +122,7 @@ html {
 .button:hover svg path, .button:focus svg path {
   stroke: #368b3c;
 }
-.button:active {
+.button:active::before {
   background-color: #4a9f50;
 }
 
@@ -178,9 +192,6 @@ html {
   font-size: 1.067rem;
   font-weight: 500;
   line-height: 1.4;
-}
-.hero__button {
-  height: 4rem;
 }
 
 .portfolio {
