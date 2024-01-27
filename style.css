@@ -6,42 +6,71 @@
   font-family: "Montserrat400";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/montserrat-v26-latin-regular.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-regular.woff") format("woff"), url("../../fonts/montserrat-v26-latin-regular.ttf") format("truetype");
+  src: url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.woff2") format("woff2"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.woff") format("woff"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat500";
   font-style: normal;
   font-weight: 500;
-  src: url("../../fonts/montserrat-v26-latin-500.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-500.woff") format("woff"), url("../../fonts/montserrat-v26-latin-500.ttf") format("truetype");
+  src: url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.woff2") format("woff2"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.woff") format("woff"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat600";
   font-style: normal;
   font-weight: 600;
-  src: url("../../fonts/montserrat-v26-latin-600.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-600.woff") format("woff"), url("../../fonts/montserrat-v26-latin-600.ttf") format("truetype");
+  src: url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.woff") format("woff"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat700";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/montserrat-v26-latin-700.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-700.woff") format("woff"), url("../../fonts/montserrat-v26-latin-700.ttf") format("truetype");
+  src: url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.woff2") format("woff2"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.woff") format("woff"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
   font-family: "Montserrat800";
   font-style: normal;
   font-weight: 800;
-  src: url("../../fonts/montserrat-v26-latin-800.woff2") format("woff2"), url("../../fonts/montserrat-v26-latin-800.woff") format("woff"), url("../../fonts/montserrat-v26-latin-800.ttf") format("truetype");
+  src: url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.woff") format("woff"), url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.ttf") format("truetype");
 }
+.main__title {
+  margin-bottom: 1.333rem;
+  max-width: 56rem;
+  color: #fff;
+  font-family: "Montserrat800", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.section__title {
+  color: #fff;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 2.667rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 html {
   font-size: 1.042vw;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  color: #101010;
+  background-color: #fff;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .container {
-  max-width: 77.333rem;
+  max-width: 77.4rem;
   margin: 0 auto;
   padding: 0 1.333rem;
 }
@@ -49,21 +78,6 @@ html {
   margin: 0 0 0 9.321rem;
   max-width: none;
   padding: 0;
-}
-
-.main__title {
-  margin-bottom: 1.333rem;
-  max-width: 56rem;
-  color: #fff;
-  font-size: 4rem;
-  font-weight: 800;
-}
-
-.section__title {
-  color: #fff;
-  font-size: 2.667rem;
-  font-weight: 600;
-  line-height: 1.4;
 }
 
 .button {
@@ -76,6 +90,7 @@ html {
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+  font-family: "Montserrat500", sans-serif;
   font-size: 0.933rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -133,7 +148,7 @@ html {
   z-index: 99;
 }
 .header__wrapper {
-  height: 3.333rem;
+  height: 6rem;
   display: flex;
   padding: 1.333rem 2rem;
   justify-content: space-between;
@@ -181,7 +196,7 @@ html {
   justify-content: center;
 }
 .hero__text {
-  max-width: 25.333rem;
+  max-width: 28rem;
   display: flex;
   margin-bottom: 5.333rem;
   padding: 0 1rem;
@@ -189,9 +204,113 @@ html {
   gap: 0.733rem;
   border-left: 0.133rem solid #368b3c;
   color: #fff;
+  font-family: "Montserrat500", sans-serif;
   font-size: 1.067rem;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.services {
+  padding: 13.333rem 0;
+}
+.services__title {
+  color: #101010;
+  margin-bottom: 4rem;
+}
+.services__subtitle {
+  width: 12rem;
+  margin-bottom: 0.667rem;
+  font-family: "Montserrat700", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.services__card {
+  width: 17.467rem;
+  padding: 2rem;
+  border: 0.067rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.333rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.services__card:hover, .services__card:focus {
+  background-color: #368b3c;
+  border: 0.067rem solid #368b3c;
+}
+.services__card:hover .services__description, .services__card:focus .services__description {
+  color: #fff;
+}
+.services__card:hover .services__term--wrapper, .services__card:focus .services__term--wrapper {
+  color: #fff;
+  border: 0.067rem solid rgba(255, 255, 255, 0.3);
+}
+.services__card:hover .services__price-uah, .services__card:focus .services__price-uah {
+  color: #fff;
+}
+.services__card:hover .services__price-usd, .services__card:focus .services__price-usd {
+  color: #101010;
+}
+.services__card:hover svg, .services__card:focus svg {
+  scale: 1.48;
+}
+.services__card:hover svg circle, .services__card:focus svg circle {
+  fill: #fff;
+}
+.services__description {
+  width: 12rem;
+  margin-bottom: 1.333rem;
+  color: rgba(16, 16, 16, 0.8);
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.services__term--wrapper {
+  margin-bottom: 2rem;
+  display: inline-flex;
+  padding: 0.533rem 1rem;
+  color: rgba(16, 16, 16, 0.7);
+  border: 0.067rem solid rgba(16, 16, 16, 0.1);
+  border-radius: 6.667rem;
+  transition: all 0.3s ease-in-out;
+}
+.services__term {
+  font-family: "Montserrat600", sans-serif;
+  font-size: 0.867rem;
+  font-weight: 600;
+}
+.services__days {
+  font-family: "Montserrat400", sans-serif;
+  font-weight: 400;
+}
+.services__price--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__price--wrapper svg {
+  width: 1.933rem;
+  height: 1.933rem;
+  transition: all 0.3s ease-in-out;
+}
+.services__price--wrapper svg circle {
+  fill: rgba(54, 139, 60, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.services__price--wrapper svg path {
+  stroke: #368b3c;
+}
+.services__price-uah {
+  margin-bottom: 0.333rem;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.services__price-usd {
+  color: #368b3c;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio {
@@ -254,12 +373,14 @@ html {
 .portfolio__name {
   color: #fff;
   margin-bottom: 1rem;
+  font-family: "Montserrat700", sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
 }
 .portfolio__excerpt {
   width: 11.333rem;
   color: rgba(255, 255, 255, 0.7);
+  font-family: "Montserrat500", sans-serif;
   font-size: 1rem;
   font-weight: 500;
 }

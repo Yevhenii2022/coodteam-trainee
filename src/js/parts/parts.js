@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	listIcons.forEach(function (listIcon) {
 		listIcon.addEventListener("mouseenter", function () {
-			header.style.height = "4rem";
+			header.style.height = "7.333rem";
 		});
 
 		listIcon.addEventListener("mouseleave", function () {
-			header.style.height = "3.333rem";
+			header.style.height = "6rem";
 		});
 	});
 
 	headerButton.addEventListener("mouseenter", function () {
-		header.style.height = "4rem";
+		header.style.height = "7.333rem";
 	});
 
 	headerButton.addEventListener("mouseleave", function () {
-		header.style.height = "3.333rem";
+		header.style.height = "6rem";
 	});
 });

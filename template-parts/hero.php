@@ -5,7 +5,7 @@
         <p class="hero__text">
           COOD — стратегічний партнер по розробці програмного забезпечення
         </p>
-        <a class="button" href="#">
+        <a class="button hero__button" href="#">
           <span>Зв’язатись з нами</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 24" fill="none">
             <circle cx="11.5" cy="12" r="11.5" fill="#368B3C" />

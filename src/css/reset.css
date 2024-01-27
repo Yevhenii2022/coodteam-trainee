@@ -64,21 +64,9 @@ td {
 	outline: 0;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	color: #101010;
-	background-color: white;
-	font-family: "Montserrat", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
-
 ol,
-ul {
+ul,
+li {
 	list-style: none;
 }
 
@@ -111,6 +99,11 @@ img {
 	width: 100%;
 	object-fit: cover;
 	display: block;
+}
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 a {

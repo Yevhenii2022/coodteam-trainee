@@ -16,6 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 
+	var services = new Swiper(".services__slider", {
+		slidesPerView: 4,
+		spaceBetween: 24,
+		loop: true,
+		speed: 1000,
+		// centeredSlides: true,
+		keyboard: {
+			enabled: true,
+		},
+	});
+
 	var portfolio = new Swiper(".portfolio__slider", {
 		slidesPerView: 3.5,
 		spaceBetween: 53,

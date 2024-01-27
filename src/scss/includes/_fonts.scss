@@ -4,9 +4,9 @@
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url("../../fonts/montserrat-v26-latin-regular.woff2") format("woff2"),
-		url("../../fonts/montserrat-v26-latin-regular.woff") format("woff"),
-		url("../../fonts/montserrat-v26-latin-regular.ttf") format("truetype");
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.woff2") format("woff2"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.woff") format("woff"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 @font-face {
 	font-display: swap;
@@ -14,19 +14,20 @@
 	font-style: normal;
 	font-weight: 500;
 	src:
-		url("../../fonts/montserrat-v26-latin-500.woff2") format("woff2"),
-		url("../../fonts/montserrat-v26-latin-500.woff") format("woff"),
-		url("../../fonts/montserrat-v26-latin-500.ttf") format("truetype");
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.woff2") format("woff2"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.woff") format("woff"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Medium.ttf") format("truetype");
 }
+
 @font-face {
 	font-display: swap;
 	font-family: "Montserrat600";
 	font-style: normal;
 	font-weight: 600;
 	src:
-		url("../../fonts/montserrat-v26-latin-600.woff2") format("woff2"),
-		url("../../fonts/montserrat-v26-latin-600.woff") format("woff"),
-		url("../../fonts/montserrat-v26-latin-600.ttf") format("truetype");
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.woff") format("woff"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 @font-face {
 	font-display: swap;
@@ -34,9 +35,9 @@
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url("../../fonts/montserrat-v26-latin-700.woff2") format("woff2"),
-		url("../../fonts/montserrat-v26-latin-700.woff") format("woff"),
-		url("../../fonts/montserrat-v26-latin-700.ttf") format("truetype");
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.woff2") format("woff2"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.woff") format("woff"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-Bold.ttf") format("truetype");
 }
 @font-face {
 	font-display: swap;
@@ -44,7 +45,7 @@
 	font-style: normal;
 	font-weight: 800;
 	src:
-		url("../../fonts/montserrat-v26-latin-800.woff2") format("woff2"),
-		url("../../fonts/montserrat-v26-latin-800.woff") format("woff"),
-		url("../../fonts/montserrat-v26-latin-800.ttf") format("truetype");
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.woff") format("woff"),
+		url("/wp-content/themes/pointer-theme/src/fonts/Montserrat-ExtraBold.ttf") format("truetype");
 }

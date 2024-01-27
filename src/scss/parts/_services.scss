@@ -1,0 +1,119 @@
+.services {
+	padding: 13.333rem 0;
+
+	&__title {
+		color: $black-text;
+		margin-bottom: 4rem;
+	}
+
+	&__subtitle {
+		width: 12rem;
+		margin-bottom: 0.667rem;
+		font-family: $mont700;
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+
+	&__card {
+		width: 17.467rem;
+		// min-height: 17rem;
+		padding: 2rem;
+		border: 0.067rem solid rgba(0, 0, 0, 0.3);
+		border-radius: 1.333rem;
+		background-color: $white;
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			background-color: $green;
+			border: 0.067rem solid $green;
+
+			.services__description {
+				color: $white;
+			}
+			.services__term--wrapper {
+				color: $white;
+				border: 0.067rem solid rgba(255, 255, 255, 0.3);
+			}
+			.services__price-uah {
+				color: $white;
+			}
+			.services__price-usd {
+				color: $black-text;
+			}
+
+			svg {
+				scale: 1.48;
+				circle {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	&__description {
+		width: 12rem;
+		margin-bottom: 1.333rem;
+		color: rgba(16, 16, 16, 0.8);
+		font-family: $mont400;
+		font-size: 1rem;
+		transition: $transition;
+	}
+
+	&__term--wrapper {
+		margin-bottom: 2rem;
+		display: inline-flex;
+		padding: 0.533rem 1rem;
+		color: rgba(16, 16, 16, 0.7);
+		border: 0.067rem solid rgba(16, 16, 16, 0.1);
+		border-radius: 6.667rem;
+		transition: $transition;
+	}
+
+	&__term {
+		font-family: $mont600;
+		font-size: 0.867rem;
+		font-weight: 600;
+	}
+
+	&__days {
+		font-family: $mont400;
+		font-weight: 400;
+	}
+
+	&__price--wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		svg {
+			width: 1.933rem;
+			height: 1.933rem;
+			transition: $transition;
+
+			circle {
+				fill: rgba(54, 139, 60, 0.3);
+				transition: $transition;
+			}
+			path {
+				stroke: $green;
+			}
+		}
+	}
+
+	&__price-uah {
+		margin-bottom: 0.333rem;
+		font-family: $mont600;
+		font-size: 1rem;
+		font-weight: 600;
+		transition: $transition;
+	}
+
+	&__price-usd {
+		color: $green;
+		font-family: $mont600;
+		font-size: 1.6rem;
+		font-weight: 600;
+		transition: $transition;
+	}
+}

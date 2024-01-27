@@ -72,6 +72,7 @@
 	&__name {
 		color: $white;
 		margin-bottom: 1rem;
+		font-family: $mont700;
 		font-size: 1.4rem;
 		font-weight: 700;
 	}
@@ -79,6 +80,7 @@
 	&__excerpt {
 		width: 11.333rem;
 		color: rgba(255, 255, 255, 0.7);
+		font-family: $mont500;
 		font-size: 1rem;
 		font-weight: 500;
 	}
