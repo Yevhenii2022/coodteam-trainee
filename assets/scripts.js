@@ -69,7 +69,17 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var phone
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _parts_parts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/parts */ \"./src/js/parts/parts.js\");\n/* harmony import */ var _parts_parts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_parts_parts__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _libraries_libraries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libraries/libraries */ \"./src/js/libraries/libraries.js\");\n/* harmony import */ var _parts_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/slider */ \"./src/js/parts/slider.js\");\n/* harmony import */ var _parts_slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_parts_slider__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _parts_parts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/parts */ \"./src/js/parts/parts.js\");\n/* harmony import */ var _libraries_libraries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libraries/libraries */ \"./src/js/libraries/libraries.js\");\n/* harmony import */ var _parts_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/slider */ \"./src/js/parts/slider.js\");\n/* harmony import */ var _parts_slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_parts_slider__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/parts/header.js":
+/*!********************************!*\
+  !*** ./src/js/parts/header.js ***!
+  \********************************/
+/***/ (() => {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tconst header = document.querySelector(\".header__wrapper\");\r\n\tconst headerButton = document.querySelector(\".header__button\");\r\n\tconst listIcons = document.querySelectorAll(\".header__list-icon\");\r\n\r\n\tlistIcons.forEach(function (listIcon) {\r\n\t\tlistIcon.addEventListener(\"mouseenter\", function () {\r\n\t\t\theader.style.height = \"7.333rem\";\r\n\t\t});\r\n\r\n\t\tlistIcon.addEventListener(\"mouseleave\", function () {\r\n\t\t\theader.style.height = \"6rem\";\r\n\t\t});\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseenter\", function () {\r\n\t\theader.style.height = \"7.333rem\";\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseleave\", function () {\r\n\t\theader.style.height = \"6rem\";\r\n\t});\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/header.js?");
 
 /***/ }),
 
@@ -77,9 +87,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _par
 /*!*******************************!*\
   !*** ./src/js/parts/parts.js ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tconst header = document.querySelector(\".header__wrapper\");\r\n\tconst headerButton = document.querySelector(\".header__button\");\r\n\tconst listIcons = document.querySelectorAll(\".header__list-icon\");\r\n\r\n\tlistIcons.forEach(function (listIcon) {\r\n\t\tlistIcon.addEventListener(\"mouseenter\", function () {\r\n\t\t\theader.style.height = \"7.333rem\";\r\n\t\t});\r\n\r\n\t\tlistIcon.addEventListener(\"mouseleave\", function () {\r\n\t\t\theader.style.height = \"6rem\";\r\n\t\t});\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseenter\", function () {\r\n\t\theader.style.height = \"7.333rem\";\r\n\t});\r\n\r\n\theaderButton.addEventListener(\"mouseleave\", function () {\r\n\t\theader.style.height = \"6rem\";\r\n\t});\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/js/parts/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
 
 /***/ }),
 

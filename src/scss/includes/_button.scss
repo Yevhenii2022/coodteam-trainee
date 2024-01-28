@@ -67,3 +67,18 @@
 		}
 	}
 }
+
+.footer__button {
+	color: $white;
+	svg {
+		circle {
+			fill: $white;
+		}
+		path {
+			stroke: $green;
+		}
+	}
+	&::before {
+		background-color: $green;
+	}
+}

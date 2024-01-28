@@ -33,10 +33,10 @@
               <div class="portfolio__description">
                 <div>
                   <h3 class="portfolio__name">
-                    Lesgroup
+                    Donum
                   </h3>
                   <p class="portfolio__excerpt">
-                    Постачальник палива
+                    Магазин подарункових сертифікатів
                   </p>
                 </div>
                 <svg viewBox="0 0 44 43" fill="none">
@@ -53,10 +53,10 @@
               <div class="portfolio__description">
                 <div>
                   <h3 class="portfolio__name">
-                    Lesgroup
+                    Dbuy
                   </h3>
                   <p class="portfolio__excerpt">
-                    Постачальник палива
+                    Імпортер кліматичного обладнання
                   </p>
                 </div>
                 <svg viewBox="0 0 44 43" fill="none">
@@ -73,10 +73,10 @@
               <div class="portfolio__description">
                 <div>
                   <h3 class="portfolio__name">
-                    Lesgroup
+                    Dbuy
                   </h3>
                   <p class="portfolio__excerpt">
-                    Постачальник палива
+                    Імпортер кліматичного обладнання
                   </p>
                 </div>
                 <svg viewBox="0 0 44 43" fill="none">

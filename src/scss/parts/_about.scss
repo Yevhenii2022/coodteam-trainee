@@ -1,5 +1,5 @@
 .about {
-	padding: 6.667rem 0 17.6rem 0;
+	padding: 6.667rem 0 17.95rem 0;
 	border-radius: 0 0 2rem 2rem;
 	background-color: $black-text;
 
@@ -35,25 +35,4 @@
 			}
 		}
 	}
-}
-
-.about__swiper-pagination {
-	margin: 2rem auto 0;
-	display: flex;
-	justify-content: center;
-
-	@media (min-width: 1025px) {
-		margin: 0;
-	}
-}
-
-.about__swiper-pagination--span.swiper-pagination-bullet {
-	width: 0.533rem;
-	height: 0.533rem;
-	background: rgba(255, 255, 255, 0.1);
-	opacity: 1;
-}
-
-.about__swiper-pagination--span.swiper-pagination-bullet-active {
-	background: $green;
 }

@@ -1,22 +1,18 @@
 .services {
-	padding: 13.333rem 0;
+	padding: 9.267rem 0 13.333rem 0;
 
 	&__title {
 		color: $black-text;
 		margin-bottom: 4rem;
 	}
 
-	&__subtitle {
-		width: 12rem;
-		margin-bottom: 0.667rem;
-		font-family: $mont700;
-		font-size: 1.4rem;
-		font-weight: 700;
-	}
-
 	&__card {
-		width: 17.467rem;
-		// min-height: 17rem;
+		height: auto !important;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		padding: 2rem;
 		border: 0.067rem solid rgba(0, 0, 0, 0.3);
 		border-radius: 1.333rem;
@@ -31,15 +27,17 @@
 			.services__description {
 				color: $white;
 			}
-			.services__term--wrapper {
+			.services__term {
 				color: $white;
 				border: 0.067rem solid rgba(255, 255, 255, 0.3);
 			}
-			.services__price-uah {
-				color: $white;
-			}
-			.services__price-usd {
-				color: $black-text;
+			.services__price-inner {
+				h4 {
+					color: $white;
+				}
+				span {
+					color: $black-text;
+				}
 			}
 
 			svg {
@@ -51,8 +49,14 @@
 		}
 	}
 
+	&__heading {
+		margin-bottom: 0.667rem;
+		font-family: $mont700;
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+
 	&__description {
-		width: 12rem;
 		margin-bottom: 1.333rem;
 		color: rgba(16, 16, 16, 0.8);
 		font-family: $mont400;
@@ -60,60 +64,63 @@
 		transition: $transition;
 	}
 
-	&__term--wrapper {
-		margin-bottom: 2rem;
+	&__term {
+		margin-bottom: 1.667rem;
 		display: inline-flex;
 		padding: 0.533rem 1rem;
 		color: rgba(16, 16, 16, 0.7);
 		border: 0.067rem solid rgba(16, 16, 16, 0.1);
 		border-radius: 6.667rem;
 		transition: $transition;
-	}
-
-	&__term {
 		font-family: $mont600;
 		font-size: 0.867rem;
 		font-weight: 600;
-	}
 
-	&__days {
-		font-family: $mont400;
-		font-weight: 400;
-	}
-
-	&__price--wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		svg {
-			width: 1.933rem;
-			height: 1.933rem;
-			transition: $transition;
-
-			circle {
-				fill: rgba(54, 139, 60, 0.3);
-				transition: $transition;
-			}
-			path {
-				stroke: $green;
-			}
+		span {
+			margin-left: 0.267rem;
+			font-family: $mont400;
+			font-weight: 400;
 		}
 	}
 
-	&__price-uah {
-		margin-bottom: 0.333rem;
-		font-family: $mont600;
-		font-size: 1rem;
-		font-weight: 600;
-		transition: $transition;
-	}
+	&__price {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		&-inner {
+			h4 {
+				font-family: $mont600;
+				font-size: 1rem;
+				font-weight: 600;
+				transition: $transition;
 
-	&__price-usd {
-		color: $green;
-		font-family: $mont600;
-		font-size: 1.6rem;
-		font-weight: 600;
-		transition: $transition;
+				span {
+					display: block;
+					margin-top: 0.333rem;
+					color: $green;
+					font-family: $mont600;
+					font-size: 1.6rem;
+					font-weight: 600;
+					transition: $transition;
+				}
+			}
+		}
+		&-arrow {
+			width: 1.933rem;
+			height: 1.933rem;
+
+			svg {
+				width: 100%;
+				height: 100%;
+				transition: $transition;
+				circle {
+					fill: rgba(54, 139, 60, 0.3);
+					transition: $transition;
+				}
+				path {
+					stroke: $green;
+				}
+			}
+		}
 	}
 }

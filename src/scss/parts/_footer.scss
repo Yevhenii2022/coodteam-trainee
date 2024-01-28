@@ -1,0 +1,58 @@
+.footer {
+	padding: 13.8rem 0 1.933rem 0;
+
+	&__wrapper {
+		height: 37rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 1.333rem;
+		font-family: $mont700;
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1.4;
+	}
+
+	&__text {
+		margin-bottom: 4rem;
+		font-family: $mont500;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+
+	&__box {
+		width: 100%;
+		height: 6.133rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		background-color: $black;
+		border-radius: 2rem;
+	}
+
+	&__logo {
+		svg {
+			width: 6.267rem;
+			height: 1.867rem;
+		}
+	}
+
+	&__email {
+		svg {
+			width: 12.667rem;
+			height: 2.133rem;
+		}
+	}
+}
