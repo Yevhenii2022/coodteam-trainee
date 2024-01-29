@@ -134,7 +134,7 @@
 
           </div>
         </div>
-        <!-- <div class="clients__swiper-pagination"></div> -->
+        <div class="services__swiper-pagination"></div>
 
       </div>
     </div>

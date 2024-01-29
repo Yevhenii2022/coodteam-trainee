@@ -1,3 +1,5 @@
+.services__swiper-pagination,
+.portfolio__swiper-pagination,
 .clients__swiper-pagination,
 .about__swiper-pagination {
 	margin: 2rem auto 0;
@@ -11,6 +13,15 @@
 	}
 }
 
+.services__swiper-pagination,
+.portfolio__swiper-pagination {
+	@media (min-width: 541px) {
+		margin: 0;
+	}
+}
+
+.services__swiper-pagination--span.swiper-pagination-bullet,
+.portfolio__swiper-pagination--span.swiper-pagination-bullet,
 .clients__swiper-pagination--span.swiper-pagination-bullet,
 .about__swiper-pagination--span.swiper-pagination-bullet {
 	width: 0.667rem;
@@ -19,6 +30,11 @@
 	opacity: 1;
 }
 
+.services__swiper-pagination--span.swiper-pagination-bullet {
+	background: rgba(16, 16, 16, 0.2);
+}
+
+.services__swiper-pagination--span.swiper-pagination-bullet-active,
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {
 	background: $green;
