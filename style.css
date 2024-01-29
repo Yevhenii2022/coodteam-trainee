@@ -262,10 +262,28 @@ body {
   padding: 2rem;
   background-color: #000;
   border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 .footer__logo svg {
   width: 6.267rem;
   height: 1.867rem;
+}
+.footer__contents {
+  display: flex;
+  gap: 5.733rem;
+  align-items: center;
+}
+.footer__socials {
+  display: flex;
+  gap: 2rem;
+}
+.footer__icon svg {
+  transition: all 0.3s ease-in-out;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
+}
+.footer__icon svg:hover, .footer__icon svg:focus {
+  scale: 1.4;
+  filter: none;
 }
 .footer__email svg {
   width: 12.667rem;

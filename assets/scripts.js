@@ -73,6 +73,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _par
 
 /***/ }),
 
+/***/ "./src/js/parts/footer.js":
+/*!********************************!*\
+  !*** ./src/js/parts/footer.js ***!
+  \********************************/
+/***/ (() => {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tconst footer = document.querySelector(\".footer__box\");\r\n\tconst listIcons = document.querySelectorAll(\".footer__icon\");\r\n\r\n\tlistIcons.forEach(function (listIcon) {\r\n\t\tlistIcon.addEventListener(\"mouseenter\", function () {\r\n\t\t\tfooter.style.height = \"7.467rem\";\r\n\t\t});\r\n\r\n\t\tlistIcon.addEventListener(\"mouseleave\", function () {\r\n\t\t\tfooter.style.height = \"6.133rem\";\r\n\t\t});\r\n\t});\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/footer.js?");
+
+/***/ }),
+
 /***/ "./src/js/parts/header.js":
 /*!********************************!*\
   !*** ./src/js/parts/header.js ***!
@@ -90,7 +100,7 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tconst h
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/js/parts/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/js/parts/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer */ \"./src/js/parts/footer.js\");\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_footer__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
 
 /***/ }),
 
