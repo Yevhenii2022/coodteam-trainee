@@ -3,9 +3,12 @@
 	border-radius: 0 0 2rem 2rem;
 	background-color: $black-text;
 
+	&__title {
+		margin-bottom: 6.667rem;
+	}
+
 	&__socials {
 		justify-content: space-around;
-		margin-top: 6.667rem;
 
 		@include media(tablet) {
 			justify-content: inherit;

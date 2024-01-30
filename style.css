@@ -46,6 +46,7 @@
 }
 
 .section__title {
+  margin-bottom: 4rem;
   color: #fff;
   font-family: "Montserrat600", sans-serif;
   font-size: 2.667rem;
@@ -69,6 +70,13 @@ body {
   line-height: normal;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
 .container {
   max-width: 77.4rem;
   margin: 0 auto;
@@ -76,7 +84,7 @@ body {
 }
 .container--left {
   max-width: none;
-  margin: 0 0 0 10.1rem;
+  margin: 0 0 0 10.4rem;
   padding: 0;
 }
 
@@ -218,11 +226,11 @@ body {
 }
 .header__contacts {
   display: flex;
-  gap: 4rem;
+  gap: 4.2rem;
 }
 .header__list {
   display: flex;
-  gap: 2.667rem;
+  gap: 2.98rem;
   align-items: center;
 }
 .header__list-icon {
@@ -302,7 +310,7 @@ body {
   filter: none;
 }
 .footer__email svg {
-  width: 12.667rem;
+  width: 12.9rem;
   height: 2.133rem;
 }
 
@@ -336,12 +344,10 @@ body {
 }
 .services__title {
   color: #101010;
-  margin-bottom: 4rem;
 }
-.services__card {
+.services .services__card {
   height: auto !important;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -351,27 +357,27 @@ body {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
-.services__card:hover, .services__card:focus {
+.services .services__card:hover, .services .services__card:focus {
   background-color: #368b3c;
   border: 0.067rem solid #368b3c;
 }
-.services__card:hover .services__description, .services__card:focus .services__description {
+.services .services__card:hover .services__description, .services .services__card:focus .services__description {
   color: #fff;
 }
-.services__card:hover .services__term, .services__card:focus .services__term {
+.services .services__card:hover .services__term, .services .services__card:focus .services__term {
   color: #fff;
   border: 0.067rem solid rgba(255, 255, 255, 0.3);
 }
-.services__card:hover .services__price-inner h4, .services__card:focus .services__price-inner h4 {
+.services .services__card:hover .services__price-inner h4, .services .services__card:focus .services__price-inner h4 {
   color: #fff;
 }
-.services__card:hover .services__price-inner span, .services__card:focus .services__price-inner span {
+.services .services__card:hover .services__price-inner span, .services .services__card:focus .services__price-inner span {
   color: #101010;
 }
-.services__card:hover svg, .services__card:focus svg {
+.services .services__card:hover svg, .services .services__card:focus svg {
   scale: 1.48;
 }
-.services__card:hover svg circle, .services__card:focus svg circle {
+.services .services__card:hover svg circle, .services .services__card:focus svg circle {
   fill: #fff;
 }
 .services__heading {
@@ -446,9 +452,6 @@ body {
   border-radius: 2rem 2rem 0rem 0rem;
   background-color: #101010;
 }
-.portfolio__slider {
-  margin-top: 4rem;
-}
 .portfolio__link {
   display: flex;
   flex-direction: column;
@@ -518,9 +521,6 @@ body {
   position: relative;
   background-color: #101010;
 }
-.clients__slider {
-  margin-top: 4rem;
-}
 .clients__image img {
   display: block;
   width: 17.6rem;
@@ -541,9 +541,11 @@ body {
   border-radius: 0 0 2rem 2rem;
   background-color: #101010;
 }
+.about__title {
+  margin-bottom: 6.667rem;
+}
 .about__socials {
   justify-content: space-around;
-  margin-top: 6.667rem;
 }
 @media (max-width: 1025px) {
   .about__socials {
@@ -569,4 +571,50 @@ body {
 .about__socials .about__slide svg:hover, .about__socials .about__slide svg:focus {
   scale: 1.3;
   filter: none;
+}
+
+.popup {
+  padding: 2rem 0 10.333rem 0;
+}
+.popup__header {
+  margin-bottom: 8.333rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup__icon-left svg {
+  width: 3.224rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+.popup__icon-right svg {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.popup__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup__title {
+  color: #101010;
+}
+.popup__contacts {
+  margin-right: 10.733rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+.popup__contacts a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.popup__contacts svg {
+  width: 2.133rem;
+  height: 2.133rem;
 }

@@ -1,7 +1,7 @@
   <section class="services">
     <div class="container">
       <div class="services__wrapper">
-        <h2 class="section__title services__title">Наші послуги</h2>
+        <h2 class="services__title section__title">Наші послуги</h2>
 
         <div class="services__slider swiper">
           <div class="swiper-wrapper">
