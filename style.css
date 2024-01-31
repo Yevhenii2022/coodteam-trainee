@@ -162,6 +162,23 @@ button {
   background-color: #368b3c;
 }
 
+.form__button {
+  width: 100%;
+  margin-top: 2.667rem;
+  padding: 1.1rem 2.1rem 1.1rem 0;
+  color: #fff;
+  background-color: #368b3c;
+  border: none;
+  border-radius: 1.333rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 24' fill='none'%3E%3Ccircle cx='11.5' cy='12' r='11.5' fill='%23fff'/%3E%3Cpath stroke='%23368B3C' d='M6.838 11.69h9.013M12.432 7.96l3.73 3.73-3.73 3.729'/%3E%3C/svg%3E");
+  background-size: 1.533rem 1.533rem;
+  background-repeat: no-repeat;
+  background-position: 63% center;
+}
+.form__button:active {
+  background-color: #4a9f50;
+}
+
 .services__swiper-pagination,
 .portfolio__swiper-pagination,
 .clients__swiper-pagination,
@@ -202,6 +219,64 @@ button {
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {
   background: #368b3c;
+}
+
+.form__line {
+  position: relative;
+}
+.form__line::before {
+  content: "";
+  width: 0.067rem;
+  height: 100%;
+  position: absolute;
+  right: -7.933rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.form__input:not(:last-child) {
+  margin-bottom: 1.17rem;
+}
+.form__input label {
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.form__input label input {
+  width: 30.2rem;
+  margin: 0;
+  padding: 1rem 1.333rem;
+  border: 0.067rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.333rem;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.form__input label input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+.form__input label p {
+  margin-bottom: 0.667rem;
+}
+.form__file {
+  display: inline-block;
+  height: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22' stroke='%23368B3C'/%3E%3Cpath d='M22.5 15L22.5 31' stroke='%23368B3C'/%3E%3Cpath d='M30.5 23L14.5 23' stroke='%23368B3C'/%3E%3C/svg%3E");
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  transition: all 0.3s ease-in-out;
+}
+.form__file:hover, .form__file:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Cpath fill='%23fff' d='M0 0h45v45H0z'/%3E%3Ccircle cx='22.5' cy='22.5' r='22' fill='%23368B3C' stroke='%23368B3C'/%3E%3Cpath stroke='%23fff' d='M22.5 15v16M30.5 23h-16'/%3E%3C/svg%3E");
+}
+.form__file label {
+  color: #000;
+  cursor: pointer;
+}
+.form__file label p {
+  padding: 0.9rem 0 0.9rem 4rem;
+}
+.form__file input[type=file] {
+  display: none;
 }
 
 .header {
@@ -577,7 +652,7 @@ button {
   padding: 2rem 0 10.333rem 0;
 }
 .popup__header {
-  margin-bottom: 8.333rem;
+  margin-bottom: 8.23rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
