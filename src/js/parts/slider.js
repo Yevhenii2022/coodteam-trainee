@@ -16,28 +16,32 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 
-	var services = new Swiper(".services__slider", {
-		slidesPerView: 1.5,
-		spaceBetween: 24,
-		loop: true,
-		speed: 1000,
-		keyboard: {
-			enabled: true,
-		},
-		pagination: {
-			el: ".services__swiper-pagination",
-			clickable: true,
-			renderBullet: function (index, className) {
-				return '<span class="services__swiper-pagination--span ' + className + '"></span>';
+	let slides = document.querySelectorAll(".services__card");
+
+	if (slides.length > 4 || window.innerWidth < 1024) {
+		var services = new Swiper(".services__slider", {
+			slidesPerView: 1.5,
+			spaceBetween: 24,
+			loop: true,
+			speed: 1000,
+			keyboard: {
+				enabled: true,
 			},
-		},
-		breakpoints: {
-			541: {
-				slidesPerView: 4,
-				pagination: false,
+			pagination: {
+				el: ".services__swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="services__swiper-pagination--span ' + className + '"></span>';
+				},
 			},
-		},
-	});
+			breakpoints: {
+				541: {
+					slidesPerView: 4,
+					pagination: false,
+				},
+			},
+		});
+	}
 
 	var portfolio = new Swiper(".portfolio__slider", {
 		slidesPerView: 1.5,

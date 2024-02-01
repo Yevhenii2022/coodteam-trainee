@@ -18,6 +18,11 @@ button {
 	background-color: transparent;
 	border: none;
 }
+.body {
+	&--popup {
+		overflow: hidden;
+	}
+}
 
 .container {
 	max-width: 77.4rem;

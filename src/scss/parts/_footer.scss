@@ -37,10 +37,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 2rem;
+		padding: 2rem 2.3rem 2rem 2rem;
 		background-color: $black;
 		border-radius: 2rem;
 		transition: $transition;
+
+		&:hover,
+		&:focus {
+			height: 7.467rem;
+		}
 	}
 
 	&__logo {
@@ -75,10 +80,20 @@
 		}
 	}
 
-	&__email {
+	&__telegram {
+		display: flex;
+		gap: 0.667rem;
+		align-items: center;
+		justify-content: center;
 		svg {
-			width: 12.9rem;
+			width: 2.133rem;
 			height: 2.133rem;
+		}
+		span {
+			color: $white;
+			font-family: $mont500;
+			font-size: 1.067rem;
+			font-weight: 500;
 		}
 	}
 }

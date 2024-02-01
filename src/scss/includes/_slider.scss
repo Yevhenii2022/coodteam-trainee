@@ -7,6 +7,10 @@
 	justify-content: center;
 }
 
+.clients__swiper-pagination {
+	padding-right: 9.5rem;
+}
+
 .about__swiper-pagination {
 	@media (min-width: 1025px) {
 		margin: 0;

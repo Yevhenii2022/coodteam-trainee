@@ -77,6 +77,10 @@ button {
   border: none;
 }
 
+.body--popup {
+  overflow: hidden;
+}
+
 .container {
   max-width: 77.4rem;
   margin: 0 auto;
@@ -174,9 +178,15 @@ button {
   background-size: 1.533rem 1.533rem;
   background-repeat: no-repeat;
   background-position: 63% center;
+  transition: all 0.3s ease-in-out;
 }
 .form__button:active {
   background-color: #4a9f50;
+}
+.form__button:disabled {
+  color: rgba(16, 16, 16, 0.5);
+  background-color: #c7c7c7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 24' fill='none'%3E%3Ccircle cx='11.5' cy='12' r='11.5' fill='%23A9A9A9'/%3E%3Cpath stroke='%23fff' d='M6.838 11.69h9.013M12.432 7.96l3.73 3.73-3.73 3.729'/%3E%3C/svg%3E");
 }
 
 .services__swiper-pagination,
@@ -186,6 +196,10 @@ button {
   margin: 2rem auto 0;
   display: flex;
   justify-content: center;
+}
+
+.clients__swiper-pagination {
+  padding-right: 9.5rem;
 }
 
 @media (min-width: 1025px) {
@@ -253,6 +267,9 @@ button {
 .form__input label input::placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
+.form__input label input.wpcf7-not-valid {
+  border-color: #e83942;
+}
 .form__input label p {
   margin-bottom: 0.667rem;
 }
@@ -279,11 +296,29 @@ button {
   display: none;
 }
 
+.wpcf7-not-valid-tip {
+  position: absolute;
+  margin-top: 0.333rem;
+  color: #e83942;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 0.975rem;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 2rem;
   width: 100%;
-  z-index: 99;
+  z-index: 5;
 }
 .header__wrapper {
   height: 6rem;
@@ -294,6 +329,9 @@ button {
   border-radius: 2rem;
   background-color: #000;
   transition: all 0.3s ease-in-out;
+}
+.header__wrapper:hover, .header__wrapper:focus {
+  height: 7.333rem;
 }
 .header__logo svg {
   width: 6.267rem;
@@ -358,10 +396,13 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 2.3rem 2rem 2rem;
   background-color: #000;
   border-radius: 2rem;
   transition: all 0.3s ease-in-out;
+}
+.footer__box:hover, .footer__box:focus {
+  height: 7.467rem;
 }
 .footer__logo svg {
   width: 6.267rem;
@@ -384,9 +425,21 @@ button {
   scale: 1.4;
   filter: none;
 }
-.footer__email svg {
-  width: 12.9rem;
+.footer__telegram {
+  display: flex;
+  gap: 0.667rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer__telegram svg {
+  width: 2.133rem;
   height: 2.133rem;
+}
+.footer__telegram span {
+  color: #fff;
+  font-family: "Montserrat500", sans-serif;
+  font-size: 1.067rem;
+  font-weight: 500;
 }
 
 .hero {
@@ -394,6 +447,7 @@ button {
   background-color: #273627;
 }
 .hero__wrapper {
+  padding-top: 3.8rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -421,8 +475,9 @@ button {
   color: #101010;
 }
 .services .services__card {
+  margin-right: 1.41rem;
   height: auto !important;
-  width: 100%;
+  width: 17.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -562,7 +617,7 @@ button {
   perspective: 66.667rem;
 }
 .portfolio__description {
-  padding-left: 0.767rem;
+  padding: 0 0.767rem;
   display: flex;
   justify-content: space-between;
 }
@@ -649,7 +704,19 @@ button {
 }
 
 .popup {
+  width: 100%;
+  height: 100vh;
   padding: 2rem 0 10.333rem 0;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -5;
+  transition: all 0.3s ease-in-out;
+}
+.popup--show {
+  opacity: 1;
+  z-index: 100;
 }
 .popup__header {
   margin-bottom: 8.23rem;
@@ -660,9 +727,8 @@ button {
 .popup__icon-left svg {
   width: 3.224rem;
   height: 1.8rem;
-  cursor: pointer;
 }
-.popup__icon-right svg {
+.popup--close svg {
   width: 3rem;
   height: 3rem;
   cursor: pointer;
