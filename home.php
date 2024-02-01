@@ -19,5 +19,7 @@ get_header();
 
   <?php get_template_part('template-parts/popup'); ?>
 
+  <?php get_template_part('template-parts/success'); ?>
+
 </main>
 <?php get_footer(); ?>

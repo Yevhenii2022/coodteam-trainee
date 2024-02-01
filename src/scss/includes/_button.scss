@@ -83,6 +83,16 @@
 	}
 }
 
+.success__button {
+	padding: 0.9rem 4.4rem;
+	color: $white;
+	font-size: 1.2rem;
+	line-height: 1.463rem;
+	&::before {
+		background-color: $green;
+	}
+}
+
 .form__button {
 	width: 100%;
 	margin-top: 2.667rem;

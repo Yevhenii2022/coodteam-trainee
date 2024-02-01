@@ -43,11 +43,13 @@
 	}
 
 	&__title {
+		margin-bottom: 3.9rem;
 		color: $black-text;
 	}
 
 	&__contacts {
 		margin-right: 10.733rem;
+		padding-top: 2.267rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
