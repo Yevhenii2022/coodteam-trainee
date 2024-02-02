@@ -1,13 +1,19 @@
 .popup {
 	width: 100%;
 	height: 100vh;
-	padding: 2rem 0 10.333rem 0;
+	padding: 2rem 0 0;
 	position: fixed;
 	top: 0;
 	background-color: $white;
 	opacity: 0;
 	z-index: -5;
 	transition: $transition;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
 	&--show {
 		opacity: 1;
@@ -33,6 +39,37 @@
 			width: 3rem;
 			height: 3rem;
 			cursor: pointer;
+			circle {
+				stroke: $black-text;
+				transition: $transition;
+			}
+			path {
+				stroke: $black-text;
+				transition: $transition;
+			}
+		}
+
+		&:hover,
+		:focus {
+			svg {
+				circle {
+					stroke: $green-active;
+				}
+				path {
+					stroke: $green-active;
+				}
+			}
+		}
+
+		&:active {
+			svg {
+				circle {
+					stroke: $green;
+				}
+				path {
+					stroke: $green;
+				}
+			}
 		}
 	}
 

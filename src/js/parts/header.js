@@ -1,23 +1,15 @@
-// document.addEventListener("DOMContentLoaded", function () {
-// 	const header = document.querySelector(".header__wrapper");
-// 	const headerButton = document.querySelector(".header__button");
-// 	const listIcons = document.querySelectorAll(".header__list-icon");
+document.addEventListener("DOMContentLoaded", function () {
+	const header = document.querySelector(".header");
+	scrollPrev = 0;
 
-// 	listIcons.forEach(function (listIcon) {
-// 		listIcon.addEventListener("mouseenter", function () {
-// 			header.style.height = "7.333rem";
-// 		});
+	window.addEventListener("scroll", function () {
+		const scrolled = window.pageYOffset || this.document.documentElement.scrollTop;
 
-// 		listIcon.addEventListener("mouseleave", function () {
-// 			header.style.height = "6rem";
-// 		});
-// 	});
-
-// 	headerButton.addEventListener("mouseenter", function () {
-// 		header.style.height = "7.333rem";
-// 	});
-
-// 	headerButton.addEventListener("mouseleave", function () {
-// 		header.style.height = "6rem";
-// 	});
-// });
+		if (scrolled > 100 && scrolled > scrollPrev) {
+			header.classList.add("header--hidden");
+		} else {
+			header.classList.remove("header--hidden");
+		}
+		scrollPrev = scrolled;
+	});
+});

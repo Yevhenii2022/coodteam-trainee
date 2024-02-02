@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const wpcf7Elm = document.querySelector(".wpcf7");
 	const submitButton = document.querySelector(".form__button");
-	let popup = document.querySelector(".success");
+	let popupSuccess = document.querySelector(".success");
 
 	if (wpcf7Elm) {
 		wpcf7Elm.addEventListener(
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			// "wpcf7mailfailed",
 			"wpcf7submit",
 			event => {
-				popup.classList.add("success--show");
+				popupSuccess.classList.add("success--show");
 				document.body.classList.add("body--popup");
 				const form = event.target;
 				form.reset();
