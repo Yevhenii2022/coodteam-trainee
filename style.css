@@ -366,20 +366,16 @@ button {
 }
 .header__list {
   display: flex;
-  gap: 2.98rem;
+  gap: 2.74rem;
   align-items: center;
 }
-.header__list-icon {
-  width: 1.867rem;
-  height: 1.8rem;
+.header__list svg {
+  width: 2.063rem;
+  height: 2.125rem;
   fill: #fff;
   transition: all 0.3s ease-in-out;
 }
-.header__list-icon--size {
-  width: 2.2rem;
-  height: 2.267rem;
-}
-.header__list-icon:hover, .header__list-icon:focus {
+.header__list svg:hover, .header__list svg:focus {
   scale: 1.3;
   fill: #368b3c;
 }
