@@ -1,6 +1,10 @@
+<?php
+$title = get_field('form_title', 'options');
+?>
+
 <div class="popup">
   <div class="container">
-    <div class="success__wrapper">
+    <div class="popup__wrapper">
 
       <div class="popup__header">
         <div class="popup__icon-left">
