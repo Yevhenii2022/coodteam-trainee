@@ -36,8 +36,8 @@
 		width: 100%;
 		height: 6.133rem;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		gap: 12.23rem;
 		padding: 2rem
 			2.3rem 2rem
 			2rem;
@@ -60,19 +60,21 @@
 
 	&__contents {
 		display: flex;
-		gap: 5.733rem;
+		gap: 1.67rem;
 		align-items: center;
 	}
 
 	&__socials {
+		margin-top: 0.33rem;
 		display: flex;
 		align-items: center;
-		gap: 0.37rem;
+		gap: 1.86rem;
 	}
 
 	&__icon {
 		svg {
-			scale: 0.55;
+			width: auto;
+			height: 1.7rem;
 			transition: $transition;
 			filter: brightness(
 					0
@@ -95,26 +97,57 @@
 
 			&:hover,
 			&:focus {
-				scale: 0.8;
+				scale: 1.3;
 				filter: none;
 			}
 		}
 	}
 
-	&__telegram {
+	&__contacts {
 		display: flex;
-		gap: 0.667rem;
+		flex-direction: row-reverse;
+		justify-content: start;
 		align-items: center;
-		justify-content: center;
-		svg {
-			width: 2.133rem;
-			height: 2.133rem;
+		gap: 1.38rem;
+
+		&
+			> :nth-child(
+				3
+			)
+			> span {
+			display: none;
 		}
+
+		a {
+			display: flex;
+			align-items: center;
+
+			&:hover,
+			&:focus {
+				svg {
+					scale: 1.3;
+					fill: $green;
+				}
+				span {
+					color: $green;
+				}
+			}
+		}
+
+		svg {
+			width: 2.063rem;
+			height: 2.125rem;
+			fill: $white;
+			transition: $transition;
+		}
+
 		span {
+			margin-left: 0.75rem;
 			color: $white;
 			font-family: $mont500;
 			font-size: 1.067rem;
 			font-weight: 500;
+			transition: $transition;
 		}
 	}
 }

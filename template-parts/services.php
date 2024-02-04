@@ -1,5 +1,5 @@
     <?php
-    $title = get_field('services_title');
+    $title = get_field('services_title') ?? '';
     ?>
 
     <section class="services">

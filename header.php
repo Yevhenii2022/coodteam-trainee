@@ -46,12 +46,14 @@
 					<div class="header__contacts">
 						<ul class="header__list">
 							<?php while (have_rows('contacts_list', 'options')) : the_row();
-								$image = get_sub_field('contacts_icon') ?? '';
+								$image = get_sub_field('contacts_icon');
 								$link = get_sub_field('contacts_icon_link') ?? '';
 							?>
 								<li>
 									<a href="<?= $link; ?>">
-										<?= file_get_contents($image); ?>
+										<?php if ($image) {
+											echo file_get_contents($image);
+										} ?>
 										<!-- <?= wp_get_attachment_image($image, "full", '', ['alt' => get_the_title()]) ?> -->
 									</a>
 								</li>

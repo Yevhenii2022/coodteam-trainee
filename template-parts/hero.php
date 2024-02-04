@@ -1,7 +1,7 @@
   <?php
-  $title = get_field('hero_title');
-  $subtitle = get_field('hero_subtitle');
-  $button_text = get_field('hero_button');
+  $title = get_field('hero_title') ?? '';
+  $subtitle = get_field('hero_subtitle') ?? '';
+  $button_text = get_field('hero_button') ?? '';
   ?>
 
   <section class="hero">

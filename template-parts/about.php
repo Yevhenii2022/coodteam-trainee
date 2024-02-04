@@ -7,11 +7,13 @@
           <div class="about__socials  swiper-wrapper">
 
             <?php while (have_rows('socials_list', 'options')) : the_row();
-              $image = get_sub_field('socials_icon') ?? '';
+              $image = get_sub_field('socials_icon');
               $link = get_sub_field('socials_link') ?? '';
             ?>
               <a class="about__slide swiper-slide" href="<?= $link; ?>">
-                <?= file_get_contents($image); ?>
+                <?php if ($image) {
+                  echo file_get_contents($image);
+                } ?>
               </a>
             <?php endwhile; ?>
 

@@ -10,9 +10,9 @@
  * @package pointer_theme
  */
 
-$title = get_field('footer_title', 'options');
-$subtitle = get_field('footer_subtitle', 'options');
-$button_text = get_field('footer_button', 'options');
+$title = get_field('footer_title', 'options') ?? '';
+$subtitle = get_field('footer_subtitle', 'options') ?? '';
+$button_text = get_field('footer_button', 'options') ?? '';
 ?>
 
 <footer class="footer">
@@ -50,38 +50,34 @@ $button_text = get_field('footer_button', 'options');
           <div class="footer__socials">
 
             <?php while (have_rows('socials_list', 'options')) : the_row();
-              $image = get_sub_field('socials_icon') ?? '';
+              $image = get_sub_field('socials_icon');
               $link = get_sub_field('socials_link') ?? '';
             ?>
               <a class="footer__icon" href="<?= $link; ?>">
-                <?= file_get_contents($image); ?>
+                <?php if ($image) {
+                  echo file_get_contents($image);
+                } ?>
               </a>
             <?php endwhile; ?>
-
-
-            <a class="footer__icon" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="1.733rem" height="1.6rem">
-                <g fill="#368b3c">
-                  <path d="m23.944 16.116-5.636-2.403a1.875 1.875 0 0 0-1.815.156l-3.016 2.007a9.194 9.194 0 0 1-4.23-4.207l1.994-3.052a1.91 1.91 0 0 0 .168-1.815L8.994 1.166A1.959 1.959 0 0 0 6.987.012 6.754 6.754 0 0 0 1.11 6.694C1.11 16.236 8.874 24 18.416 24a6.754 6.754 0 0 0 6.682-5.877 1.958 1.958 0 0 0-1.154-2.007ZM16.18 2.812a8.725 8.725 0 0 1 6.118 6.117.962.962 0 0 0 .925.721c.086 0 .17-.012.253-.036a.95.95 0 0 0 .673-1.177A10.576 10.576 0 0 0 16.673.96a.962.962 0 1 0-.492 1.851ZM15.183 6.526a4.856 4.856 0 0 1 3.401 3.4.95.95 0 0 0 .926.722.768.768 0 0 0 .24-.036.948.948 0 0 0 .685-1.178 6.706 6.706 0 0 0-4.76-4.76.961.961 0 1 0-.492 1.852Z" />
-                </g>
-                <defs>
-                  <clipPath>
-                    <path d="M.557 0h24.89v24H.556z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
           </div>
 
-          <a class="footer__telegram" href="#">
+          <div class="footer__contacts">
+            <?php while (have_rows('contacts_list', 'options')) : the_row();
+              $image = get_sub_field('contacts_icon');
+              $link = get_sub_field('contacts_icon_link') ?? '';
+              $name = get_sub_field('contacts_name') ?? '';
+            ?>
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 32">
-              <path fill="#fff" d="M30.739 6.14 26.4 26.6c-.327 1.444-1.18 1.803-2.394 1.123l-6.61-4.871-3.19 3.068c-.353.353-.648.648-1.328.648l.474-6.733 12.253-11.07c.532-.476-.116-.739-.829-.264L9.63 18.038l-6.52-2.04c-1.419-.443-1.445-1.419.295-2.1L28.91 4.074c1.18-.443 2.214.263 1.829 2.066Z" />
-            </svg>
-            <span>@vovamamochka</span>
-          </a>
+              <a href="<?= $link; ?>">
+                <?php if ($image) {
+                  echo file_get_contents($image);
+                } ?>
+                <span><?= $name; ?></span>
+              </a>
+            <?php endwhile; ?>
+          </div>
+
         </div>
-
       </div>
     </div>
   </div>

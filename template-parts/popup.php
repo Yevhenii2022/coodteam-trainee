@@ -22,33 +22,26 @@ $title = get_field('form_title', 'options');
 
       <div class="popup__content">
         <div class="popup__form">
-          <h2 class="popup__title section__title">Зробимо сайт разом</h2>
+          <h2 class="popup__title section__title"><?= $title ?></h2>
           <?php get_template_part('template-parts/form'); ?>
         </div>
         <div class="popup__contacts">
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <g fill="#368B3C" clip-path="url(#a)">
-                <path d="m27.967 20.975-6.15-2.622a2.046 2.046 0 0 0-1.979.17l-3.29 2.19a10.03 10.03 0 0 1-4.616-4.589l2.177-3.33a2.084 2.084 0 0 0 .183-1.98l-2.635-6.148a2.137 2.137 0 0 0-2.19-1.259 7.368 7.368 0 0 0-6.41 7.29c0 10.41 8.469 18.879 18.879 18.879a7.369 7.369 0 0 0 7.29-6.411 2.137 2.137 0 0 0-1.26-2.19ZM19.497 6.462a9.519 9.519 0 0 1 6.673 6.673 1.048 1.048 0 0 0 1.01.787.994.994 0 0 0 .275-.04 1.036 1.036 0 0 0 .734-1.284 11.538 11.538 0 0 0-8.154-8.155 1.049 1.049 0 1 0-.538 2.019ZM18.409 10.513a5.297 5.297 0 0 1 3.71 3.71 1.036 1.036 0 0 0 1.01.787.84.84 0 0 0 .262-.04 1.037 1.037 0 0 0 .747-1.284 7.317 7.317 0 0 0-5.192-5.192 1.049 1.049 0 1 0-.537 2.02Z" />
-              </g>
-              <defs>
-                <clipPath>
-                  <path fill="#fff" d="M2.453 3.394h27.151v26.182H2.454z" />
-                </clipPath>
-              </defs>
-            </svg>
-            <p>+380 97 006 60 93</p>
-          </a>
+          <?php while (have_rows('contacts_list', 'options')) : the_row();
+            $image = get_sub_field('contacts_icon');
+            $link = get_sub_field('contacts_icon_link') ?? '';
+            $name = get_sub_field('contacts_name') ?? '';
+          ?>
 
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <path fill="#368B3C" d="M30.293 6.14 25.955 26.6c-.328 1.444-1.181 1.803-2.394 1.123l-6.61-4.871-3.19 3.068c-.353.353-.649.648-1.329.648l.475-6.733 12.252-11.07c.533-.475-.116-.739-.828-.264L9.185 18.038l-6.521-2.04c-1.418-.443-1.444-1.419.295-2.1l25.505-9.825c1.181-.443 2.214.263 1.83 2.067Z" />
-            </svg>
-            <p>@vovamamochka</p>
-          </a>
+            <a href="<?= $link; ?>">
+              <?php if ($image) {
+                echo file_get_contents($image);
+              } ?>
+              <span><?= $name; ?></span>
+            </a>
+          <?php endwhile; ?>
+
         </div>
       </div>
-
     </div>
   </div>
 </div>
