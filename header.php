@@ -46,8 +46,8 @@
 					<div class="header__contacts">
 						<ul class="header__list">
 							<?php while (have_rows('contacts_list', 'options')) : the_row();
-								$image = get_sub_field('header_icon') ?? '';
-								$link = get_sub_field('header_icon_link') ?? '';
+								$image = get_sub_field('contacts_icon') ?? '';
+								$link = get_sub_field('contacts_icon_link') ?? '';
 							?>
 								<li>
 									<a href="<?= $link; ?>">

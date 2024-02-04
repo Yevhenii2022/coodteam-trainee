@@ -434,14 +434,16 @@ button {
 }
 .footer__socials {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 0.37rem;
 }
 .footer__icon svg {
+  scale: 0.55;
   transition: all 0.3s ease-in-out;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
 }
 .footer__icon svg:hover, .footer__icon svg:focus {
-  scale: 1.4;
+  scale: 0.8;
   filter: none;
 }
 .footer__telegram {
@@ -694,16 +696,21 @@ button {
   margin-bottom: 6.667rem;
 }
 .about__socials {
-  justify-content: space-around;
+  height: fit-content;
+  display: flex;
+  gap: 5.9rem;
+  padding-left: 2rem;
 }
 @media (max-width: 1025px) {
   .about__socials {
+    padding-left: 0;
+    gap: 0rem;
     justify-content: inherit;
   }
 }
 .about__socials .about__slide {
   width: fit-content;
-  min-height: 4.3rem;
+  min-height: 4.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
