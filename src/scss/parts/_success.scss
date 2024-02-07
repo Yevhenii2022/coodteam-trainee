@@ -45,6 +45,38 @@
 			width: 3rem;
 			height: 3rem;
 			cursor: pointer;
+
+			circle {
+				stroke: $white;
+				transition: $transition;
+			}
+			path {
+				stroke: $white;
+				transition: $transition;
+			}
+		}
+
+		&:hover,
+		:focus {
+			svg {
+				circle {
+					stroke: $green-active;
+				}
+				path {
+					stroke: $green-active;
+				}
+			}
+		}
+
+		&:active {
+			svg {
+				circle {
+					stroke: $green;
+				}
+				path {
+					stroke: $green;
+				}
+			}
 		}
 	}
 

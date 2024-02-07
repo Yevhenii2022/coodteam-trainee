@@ -1,5 +1,6 @@
 .services {
-	padding: 9.267rem 0 13.333rem 0;
+	padding: 9.267rem
+		0 13.333rem 0;
 
 	&__title {
 		color: $black-text;
@@ -13,7 +14,14 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 2rem;
-		border: 0.067rem solid rgba(0, 0, 0, 0.3);
+		border: 0.067rem
+			solid
+			rgba(
+				0,
+				0,
+				0,
+				0.3
+			);
 		border-radius: 1.333rem;
 		background-color: $white;
 		transition: $transition;
@@ -21,14 +29,22 @@
 		&:hover,
 		&:focus {
 			background-color: $green;
-			border: 0.067rem solid $green;
+			border: 0.067rem
+				solid $green;
 
 			.services__description {
 				color: $white;
 			}
 			.services__term {
 				color: $white;
-				border: 0.067rem solid rgba(255, 255, 255, 0.3);
+				border: 0.067rem
+					solid
+					rgba(
+						255,
+						255,
+						255,
+						0.3
+					);
 			}
 			.services__price-inner {
 				h4 {
@@ -57,7 +73,12 @@
 
 	&__description {
 		margin-bottom: 1.333rem;
-		color: rgba(16, 16, 16, 0.8);
+		color: rgba(
+			16,
+			16,
+			16,
+			0.8
+		);
 		font-family: $mont400;
 		font-size: 1rem;
 		transition: $transition;
@@ -66,9 +87,22 @@
 	&__term {
 		margin-bottom: 1.667rem;
 		display: inline-flex;
-		padding: 0.533rem 1rem;
-		color: rgba(16, 16, 16, 0.7);
-		border: 0.067rem solid rgba(16, 16, 16, 0.1);
+		padding: 0.56rem
+			1rem;
+		color: rgba(
+			16,
+			16,
+			16,
+			0.7
+		);
+		border: 0.067rem
+			solid
+			rgba(
+				16,
+				16,
+				16,
+				0.1
+			);
 		border-radius: 6.667rem;
 		transition: $transition;
 		font-family: $mont600;
@@ -76,7 +110,7 @@
 		font-weight: 600;
 
 		span {
-			margin-left: 0.267rem;
+			margin-left: 0.22rem;
 			font-family: $mont400;
 			font-weight: 400;
 		}
@@ -113,7 +147,12 @@
 				height: 100%;
 				transition: $transition;
 				circle {
-					fill: rgba(54, 139, 60, 0.3);
+					fill: rgba(
+						54,
+						139,
+						60,
+						0.3
+					);
 					transition: $transition;
 				}
 				path {

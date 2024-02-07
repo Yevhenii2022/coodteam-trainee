@@ -10,7 +10,7 @@
               $image = get_sub_field('socials_icon');
               $link = get_sub_field('socials_link') ?? '';
             ?>
-              <a class="about__slide swiper-slide" href="<?= $link; ?>">
+              <a class="about__slide swiper-slide" href="<?= $link; ?>" target="_blank">
                 <?php if ($image) {
                   echo file_get_contents($image);
                 } ?>

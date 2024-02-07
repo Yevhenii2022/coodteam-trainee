@@ -50,7 +50,7 @@
 								$link = get_sub_field('contacts_icon_link') ?? '';
 							?>
 								<li>
-									<a href="<?= $link; ?>">
+									<a href="<?= $link; ?>" target="_blank">
 										<?php if ($image) {
 											echo file_get_contents($image);
 										} ?>

@@ -1,3 +1,9 @@
+<?php
+$title = get_field('success_title', 'options') ?? '';
+$subtitle = get_field('success_subtitle', 'options') ?? '';
+$btn_text = get_field('success_btn_text', 'options') ?? '';
+?>
+
 <div class="success">
   <div class="container">
     <div class="success__wrapper">
@@ -10,18 +16,18 @@
         </div>
         <div class="success--close">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" fill="none">
-            <circle cx="22.5" cy="22.5" r="22" stroke="#fff" />
-            <path stroke="#fff" d="M28.157 17.343 16.843 28.657M28.157 28.657 16.843 17.343" />
+            <circle cx="22.5" cy="22.5" r="22" />
+            <path d="M28.157 17.343 16.843 28.657M28.157 28.657 16.843 17.343" />
           </svg>
         </div>
       </div>
 
       <div class="success__content">
-        <h2 class="success__title section__title">Дякуємо!</h2>
-        <p class="success__text">Скоро зв’яжемося з вами.</p>
+        <h2 class="success__title section__title"><?= $title ?></h2>
+        <p class="success__text"><?= $subtitle ?></p>
 
-        <a class="button success__button" href="#">
-          <span>В телеграмі швидше</span>
+        <a class="button success__button" href="#" target="_blank">
+          <span><?= $btn_text ?></span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 24">
             <circle cx="11.5" cy="12" r="11.5" fill="#fff" />
             <path fill="#368B3C" d="m16.466 7.884-1.811 8.54c-.137.603-.493.753-1 .47l-2.758-2.034-1.332 1.28c-.147.148-.27.27-.554.27l.198-2.81 5.114-4.62c.222-.198-.048-.308-.346-.11l-6.322 3.98L4.934 12c-.592-.185-.603-.592.123-.876l10.645-4.101c.493-.185.925.11.764.862Z" />

@@ -53,7 +53,7 @@ $button_text = get_field('footer_button', 'options') ?? '';
               $image = get_sub_field('socials_icon');
               $link = get_sub_field('socials_link') ?? '';
             ?>
-              <a class="footer__icon" href="<?= $link; ?>">
+              <a class="footer__icon" href="<?= $link; ?>" target="_blank">
                 <?php if ($image) {
                   echo file_get_contents($image);
                 } ?>
@@ -62,19 +62,24 @@ $button_text = get_field('footer_button', 'options') ?? '';
           </div>
 
           <div class="footer__contacts">
-            <?php while (have_rows('contacts_list', 'options')) : the_row();
+            <?php
+            $i = 1;
+            while (have_rows('contacts_list', 'options')) : the_row();
               $image = get_sub_field('contacts_icon');
               $link = get_sub_field('contacts_icon_link') ?? '';
               $name = get_sub_field('contacts_name') ?? '';
             ?>
 
-              <a href="<?= $link; ?>">
+              <a href="<?= $link; ?>" target="_blank">
                 <?php if ($image) {
                   echo file_get_contents($image);
                 } ?>
-                <span><?= $name; ?></span>
+                <?php if ($i == 1 && $name) : ?>
+                  <span><?= $name; ?></span>
+                <?php endif; ?>
               </a>
-            <?php endwhile; ?>
+            <?php $i++;
+            endwhile; ?>
           </div>
 
         </div>

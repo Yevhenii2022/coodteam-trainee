@@ -2,7 +2,7 @@
 $title = get_field('form_title', 'options');
 ?>
 
-<div class="popup">
+<div class="popup popup--show">
   <div class="container">
     <div class="popup__wrapper">
 
@@ -31,14 +31,17 @@ $title = get_field('form_title', 'options');
             $link = get_sub_field('contacts_icon_link') ?? '';
             $name = get_sub_field('contacts_name') ?? '';
           ?>
-
-            <a href="<?= $link; ?>">
+            <?php if ($link) : ?>
+              <a href="<?= $link; ?>" target="_blank">
+              <?php endif; ?>
               <?php if ($image) {
                 echo file_get_contents($image);
               } ?>
-              <span><?= $name; ?></span>
-            </a>
-          <?php endwhile; ?>
+              <?php if ($name) : ?>
+                <span><?= $name; ?></span>
+              <?php endif; ?>
+              </a>
+            <?php endwhile; ?>
 
         </div>
       </div>

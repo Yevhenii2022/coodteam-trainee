@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 @font-face {
   font-display: swap;
   font-family: "Montserrat400";
@@ -175,6 +175,9 @@ button {
 .success__button::before {
   background-color: #368b3c;
 }
+.success__button:hover svg path, .success__button:focus svg path {
+  stroke: none;
+}
 
 .form__button {
   width: 100%;
@@ -204,11 +207,27 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 24' fill='none'%3E%3Ccircle cx='11.5' cy='12' r='11.5' fill='%23A9A9A9'/%3E%3Cpath stroke='%23fff' d='M6.838 11.69h9.013M12.432 7.96l3.73 3.73-3.73 3.729'/%3E%3C/svg%3E");
 }
 
+.button__delete {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23101010' fill-opacity='.4' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12ZM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.button__delete:hover, .button__delete:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%234A9F50' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12ZM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+.button__delete:active {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23368B3C' d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12ZM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
 .services__swiper-pagination,
 .portfolio__swiper-pagination,
 .clients__swiper-pagination,
 .about__swiper-pagination {
-  margin: 2rem auto 0;
+  margin: 1.985rem auto 0;
   display: flex;
   justify-content: center;
 }
@@ -258,20 +277,20 @@ button {
   width: 0.067rem;
   height: 100%;
   position: absolute;
-  right: -7.933rem;
+  right: -8.05rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .form__input:not(:last-child) {
-  margin-bottom: 1.17rem;
+  margin-bottom: 1.2rem;
 }
 .form__input label {
   font-family: "Montserrat600", sans-serif;
   font-size: 1rem;
   font-weight: 600;
 }
-.form__input label input {
+.form__input label input,
+.form__input label textarea {
   width: 30.2rem;
-  margin: 0;
   padding: 1rem 1.333rem;
   border: 0.067rem solid rgba(0, 0, 0, 0.3);
   border-radius: 1.333rem;
@@ -279,11 +298,19 @@ button {
   font-size: 1rem;
   font-weight: 400;
 }
-.form__input label input::placeholder {
+.form__input label input::placeholder,
+.form__input label textarea::placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
-.form__input label input:focus, .form__input label input:active {
+.form__input label input:focus, .form__input label input:active,
+.form__input label textarea:focus,
+.form__input label textarea:active {
   border-color: rgba(0, 0, 0, 0.6);
+}
+.form__input label textarea {
+  height: 5.4rem;
+  resize: none;
+  padding: 0.6rem 1.25rem;
 }
 .form__input label input.wpcf7-not-valid {
   border-color: #e83942;
@@ -292,20 +319,23 @@ button {
   margin-bottom: 0.667rem;
 }
 .form__file {
-  display: inline-block;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
   height: 3rem;
+}
+.form__file label {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22' stroke='%23368B3C'/%3E%3Cpath d='M22.5 15L22.5 31' stroke='%23368B3C'/%3E%3Cpath d='M30.5 23L14.5 23' stroke='%23368B3C'/%3E%3C/svg%3E");
   background-size: 3rem 3rem;
   background-repeat: no-repeat;
   background-position: 0 center;
   transition: all 0.3s ease-in-out;
-}
-.form__file:hover, .form__file:focus {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Cpath fill='%23fff' d='M0 0h45v45H0z'/%3E%3Ccircle cx='22.5' cy='22.5' r='22' fill='%23368B3C' stroke='%23368B3C'/%3E%3Cpath stroke='%23fff' d='M22.5 15v16M30.5 23h-16'/%3E%3C/svg%3E");
-}
-.form__file label {
   color: #000;
   cursor: pointer;
+}
+.form__file label:hover, .form__file label:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Cpath fill='%23fff' d='M0 0h45v45H0z'/%3E%3Ccircle cx='22.5' cy='22.5' r='22' fill='%23368B3C' stroke='%23368B3C'/%3E%3Cpath stroke='%23fff' d='M22.5 15v16M30.5 23h-16'/%3E%3C/svg%3E");
 }
 .form__file label p {
   padding: 0.9rem 0 0.9rem 4rem;
@@ -455,9 +485,6 @@ button {
   align-items: center;
   gap: 1.38rem;
 }
-.footer__contacts > :nth-child(3) > span {
-  display: none;
-}
 .footer__contacts a {
   display: flex;
   align-items: center;
@@ -568,7 +595,7 @@ button {
 .services__term {
   margin-bottom: 1.667rem;
   display: inline-flex;
-  padding: 0.533rem 1rem;
+  padding: 0.56rem 1rem;
   color: rgba(16, 16, 16, 0.7);
   border: 0.067rem solid rgba(16, 16, 16, 0.1);
   border-radius: 6.667rem;
@@ -578,7 +605,7 @@ button {
   font-weight: 600;
 }
 .services__term span {
-  margin-left: 0.267rem;
+  margin-left: 0.22rem;
   font-family: "Montserrat400", sans-serif;
   font-weight: 400;
 }
@@ -848,9 +875,6 @@ button {
 .popup__contacts a :focus svg {
   scale: 1.3;
 }
-.popup__contacts > a:nth-child(2) {
-  display: none;
-}
 .popup__contacts span {
   font-family: "Montserrat400", sans-serif;
   font-size: 1.4rem;
@@ -904,6 +928,28 @@ button {
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+}
+.success--close svg circle {
+  stroke: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.success--close svg path {
+  stroke: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.success--close:hover svg circle,
+.success--close :focus svg circle {
+  stroke: #4a9f50;
+}
+.success--close:hover svg path,
+.success--close :focus svg path {
+  stroke: #4a9f50;
+}
+.success--close:active svg circle {
+  stroke: #368b3c;
+}
+.success--close:active svg path {
+  stroke: #368b3c;
 }
 .success__content {
   width: 100%;

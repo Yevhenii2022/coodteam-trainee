@@ -110,14 +110,6 @@
 		align-items: center;
 		gap: 1.38rem;
 
-		&
-			> :nth-child(
-				3
-			)
-			> span {
-			display: none;
-		}
-
 		a {
 			display: flex;
 			align-items: center;
