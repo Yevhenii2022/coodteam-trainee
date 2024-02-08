@@ -1,7 +1,13 @@
   <section class="about">
     <div class="container">
       <div class="about__wrapper">
-        <h2 class="about__title section__title">Читайте про нас</h2>
+
+        <?php
+        $title = get_field('about_title', 'options');
+        ?>
+        <?php if ($title) : ?>
+          <h2 class="about__title section__title"><?= $title; ?></h2>
+        <?php endif; ?>
 
         <div class="about__slider swiper">
           <div class="about__socials  swiper-wrapper">

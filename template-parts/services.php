@@ -10,134 +10,65 @@
           <div class="services__slider swiper">
             <div class="swiper-wrapper">
 
-              <a href="#" class="swiper-slide services__card">
+              <?php
+              $args = array(
+                'post_type' => 'services',
+                'post_per_page' => -1,
+              );
+              $services_query = new WP_Query($args);
 
-                <div class="services__card-top">
-                  <h3 class="services__heading">Розробка корпоративного сайту</h3>
-                  <p class="services__description">
-                    Для компаній які хочуть оновити або створити новий сайт.
-                  </p>
-                </div>
-
-                <div class="services__card-bottom">
-                  <p class="services__term">
-                    Термін:
-                    <span>до 50 днів</span>
-                  </p>
-                  <div class="services__price">
-                    <div class="services__price-inner">
-                      <h4>
-                        від 65 000 грн.
-                        <span>1800$</span>
-                      </h4>
+              if ($services_query->have_posts()) :
+                while ($services_query->have_posts()) : $services_query->the_post(); ?>
+                  <a href="<?= get_the_permalink() ?>" class="swiper-slide services__card">
+                    <div class="services__card-top">
+                      <h3 class="services__heading"><?= get_the_title() ?></h3>
+                      <p class="services__description">
+                        <?= get_the_excerpt() ?>
+                      </p>
                     </div>
-                    <div class="services__price-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" fill="none">
-                        <circle cx="14.5" cy="14.5" r="14.5" />
-                        <path d="M8.622 14.108h11.364M15.675 9.405l4.703 4.703-4.703 4.703" />
-                      </svg>
+
+                    <?php
+                    $terms = get_field('services__term');
+                    $price_uah = get_field('services_price_uah');
+                    $price_usd = get_field('services_price_usd');
+                    ?>
+                    <div class="services__card-bottom">
+                      <?php if ($terms) : ?>
+                        <p class="services__term">
+                          Термін:
+                          <span><?= $terms; ?></span>
+                        </p>
+                      <?php endif; ?>
+
+                      <?php if ($price_uah &&  $price_usd) : ?>
+                        <div class="services__price">
+                          <div class="services__price-inner">
+                            <h4>
+                              <?= $price_uah; ?>
+                              <span><?= $price_usd; ?></span>
+                            </h4>
+                          </div>
+                          <div class="services__price-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" fill="none">
+                              <circle cx="14.5" cy="14.5" r="14.5" />
+                              <path d="M8.622 14.108h11.364M15.675 9.405l4.703 4.703-4.703 4.703" />
+                            </svg>
+                          </div>
+                        </div>
+                      <?php endif; ?>
                     </div>
-                  </div>
-                </div>
-              </a>
+                  </a>
 
-              <a href="#" class="swiper-slide services__card">
-
-                <div class="services__card-top">
-                  <h3 class="services__heading">Розробка інтернет магазину</h3>
-                  <p class="services__description">
-                    Для компаній які хочуть оновити або створити новий сайт.
-                  </p>
-                </div>
-
-                <div class="services__card-bottom">
-                  <p class="services__term">
-                    Термін:
-                    <span>20-30 днів</span>
-                  </p>
-                  <div class="services__price">
-                    <div class="services__price-inner">
-                      <h4>
-                        від 65 000 грн.
-                        <span>2000$</span>
-                      </h4>
-                    </div>
-                    <div class="services__price-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" fill="none">
-                        <circle cx="14.5" cy="14.5" r="14.5" />
-                        <path d="M8.622 14.108h11.364M15.675 9.405l4.703 4.703-4.703 4.703" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#" class="swiper-slide services__card">
-
-                <div class="services__card-top">
-                  <h3 class="services__heading">Розробка Landing page</h3>
-                  <p class="services__description">
-                    Для компаній які хочуть оновити або створити новий сайт.
-                  </p>
-                </div>
-
-                <div class="services__card-bottom">
-                  <p class="services__term">
-                    Термін:
-                    <span>20-30 днів</span>
-                  </p>
-                  <div class="services__price">
-                    <div class="services__price-inner">
-                      <h4>
-                        від 15 000 грн.
-                        <span>Від 400$</span>
-                      </h4>
-                    </div>
-                    <div class="services__price-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" fill="none">
-                        <circle cx="14.5" cy="14.5" r="14.5" />
-                        <path d="M8.622 14.108h11.364M15.675 9.405l4.703 4.703-4.703 4.703" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#" class="swiper-slide services__card">
-
-                <div class="services__card-top">
-                  <h3 class="services__heading">Розробка дизайну сайту</h3>
-                  <p class="services__description">
-                    Для компаній які хочуть оновити або створити новий сайт.
-                  </p>
-                </div>
-
-                <div class="services__card-bottom">
-                  <p class="services__term">
-                    Термін:
-                    <span>10 днів</span>
-                  </p>
-                  <div class="services__price">
-                    <div class="services__price-inner">
-                      <h4>
-                        від 65 000 грн.
-                        <span>2000$</span>
-                      </h4>
-                    </div>
-                    <div class="services__price-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" fill="none">
-                        <circle cx="14.5" cy="14.5" r="14.5" />
-                        <path d="M8.622 14.108h11.364M15.675 9.405l4.703 4.703-4.703 4.703" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </a>
+              <?php endwhile;
+                wp_reset_postdata();
+              else :
+                echo "Послуг не знайдено";
+              endif;
+              ?>
 
             </div>
           </div>
           <div class="services__swiper-pagination"></div>
-
         </div>
       </div>
     </section>

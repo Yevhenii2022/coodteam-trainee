@@ -2,7 +2,7 @@
 $title = get_field('form_title', 'options');
 ?>
 
-<div class="popup popup--show">
+<div class="popup">
   <div class="container">
     <div class="popup__wrapper">
 
