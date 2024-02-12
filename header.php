@@ -48,11 +48,17 @@
 							<?php while (have_rows('contacts_list', 'options')) : the_row();
 								$image = get_sub_field('contacts_icon');
 								$link = get_sub_field('contacts_icon_link') ?? '';
+								$ch = curl_init($image);
+								curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+								curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+								$svgContent = curl_exec($ch);
+								curl_close($ch);
 							?>
 								<li>
 									<a href="<?= $link; ?>" target="_blank">
+
 										<?php if ($image) {
-											echo file_get_contents($image);
+											echo $svgContent;
 										} ?>
 										<!-- <?= wp_get_attachment_image($image, "full", '', ['alt' => get_the_title()]) ?> -->
 									</a>

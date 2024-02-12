@@ -52,10 +52,15 @@ $button_text = get_field('footer_button', 'options') ?? '';
             <?php while (have_rows('socials_list', 'options')) : the_row();
               $image = get_sub_field('socials_icon');
               $link = get_sub_field('socials_link') ?? '';
+              $ch = curl_init($image);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+              $svgContent = curl_exec($ch);
+              curl_close($ch);
             ?>
               <a class="footer__icon" href="<?= $link; ?>" target="_blank">
                 <?php if ($image) {
-                  echo file_get_contents($image);
+                  echo $svgContent;
                 } ?>
               </a>
             <?php endwhile; ?>
@@ -68,11 +73,16 @@ $button_text = get_field('footer_button', 'options') ?? '';
               $image = get_sub_field('contacts_icon');
               $link = get_sub_field('contacts_icon_link') ?? '';
               $name = get_sub_field('contacts_name') ?? '';
+              $ch = curl_init($image);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+              $svgContent = curl_exec($ch);
+              curl_close($ch);
             ?>
 
               <a href="<?= $link; ?>" target="_blank">
                 <?php if ($image) {
-                  echo file_get_contents($image);
+                  echo $svgContent;
                 } ?>
                 <?php if ($i == 1 && $name) : ?>
                   <span><?= $name; ?></span>
