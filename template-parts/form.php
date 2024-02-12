@@ -16,7 +16,7 @@
      <button class="button__delete" type="button"></button>
    </div>
  </div>
-  <div class="form__input">
-    [submit class:button class:form__button "Відправити"]
+  <div class="form__input form__submit">
+    [submit class:form__button "Відправити"]
   </div>
 </div> -->

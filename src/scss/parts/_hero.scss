@@ -1,5 +1,6 @@
 .hero {
-	border-radius: 0 0 2rem 2rem;
+	border-radius: 0 0
+		2rem 2rem;
 	background-color: #273627;
 
 	&__wrapper {
@@ -10,6 +11,12 @@
 		justify-content: center;
 	}
 
+	&__title {
+		strong {
+			color: $green;
+		}
+	}
+
 	&__text {
 		max-width: 28rem;
 		display: flex;
@@ -17,7 +24,8 @@
 		padding: 0 1rem;
 		align-items: center;
 		gap: 0.733rem;
-		border-left: 0.133rem solid $green;
+		border-left: 0.133rem
+			solid $green;
 		color: $white;
 		font-family: $mont500;
 		font-size: 1.067rem;
