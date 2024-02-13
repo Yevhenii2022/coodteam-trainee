@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scss/main.scss":
+/*!****************************!*\
+  !*** ./src/scss/main.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack_theme/./src/scss/main.scss?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -130,17 +141,6 @@ eval("document.addEventListener(\r\n\t'DOMContentLoaded',\r\n\tfunction () {\r\n
 /***/ (() => {
 
 eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n\tlet popup = document.querySelector(\".popup\");\r\n\tlet popupSuccess = document.querySelector(\".success\");\r\n\tlet closeBtn = document.querySelectorAll(\".success--close\");\r\n\r\n\tif (closeBtn.length > 0) {\r\n\t\tcloseBtn.forEach(function (button) {\r\n\t\t\tbutton.addEventListener(\"click\", function () {\r\n\t\t\t\tif (popupSuccess.classList.contains(\"success--show\")) {\r\n\t\t\t\t\tpopupSuccess.classList.remove(\"success--show\");\r\n\t\t\t\t}\r\n\t\t\t\tif (popup.classList.contains(\"popup--show\")) {\r\n\t\t\t\t\tpopup.classList.remove(\"popup--show\");\r\n\t\t\t\t}\r\n\t\t\t\tif (document.body.classList.contains(\"body--popup\")) {\r\n\t\t\t\t\tdocument.body.classList.remove(\"body--popup\");\r\n\t\t\t\t}\r\n\t\t\t});\r\n\t\t});\r\n\t}\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/success.js?");
-
-/***/ }),
-
-/***/ "./src/scss/main.scss":
-/*!****************************!*\
-  !*** ./src/scss/main.scss ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack_theme/./src/scss/main.scss?");
 
 /***/ })
 

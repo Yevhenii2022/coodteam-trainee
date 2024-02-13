@@ -60,7 +60,6 @@
 										<?php if ($image) {
 											echo $svgContent;
 										} ?>
-										<!-- <?= wp_get_attachment_image($image, "full", '', ['alt' => get_the_title()]) ?> -->
 									</a>
 								</li>
 							<?php endwhile; ?>

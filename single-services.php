@@ -3,6 +3,7 @@ get_header();
 ?>
 <main>
 
+
   <?php get_template_part('template-parts/hero'); ?>
 
   <?php get_template_part('template-parts/portfolio'); ?>
@@ -10,6 +11,8 @@ get_header();
   <?php get_template_part('template-parts/clients'); ?>
 
   <?php get_template_part('template-parts/about'); ?>
+
+  <?php get_template_part('template-parts/steps'); ?>
 
   <?php get_template_part('template-parts/popup'); ?>
 

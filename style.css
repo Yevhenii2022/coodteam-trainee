@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 @font-face {
   font-display: swap;
   font-family: "Montserrat400";
@@ -38,7 +38,7 @@
 }
 .main__title {
   margin-bottom: 1.333rem;
-  max-width: 56rem;
+  max-width: 60rem;
   color: #fff;
   font-family: "Montserrat800", sans-serif;
   font-size: 4rem;
@@ -557,7 +557,7 @@ button {
   color: #368b3c;
 }
 .hero__text {
-  max-width: 28rem;
+  max-width: 29.5rem;
   display: flex;
   margin-bottom: 5.333rem;
   padding: 0 1rem;
@@ -1004,4 +1004,65 @@ button {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4rem;
+}
+
+.steps {
+  padding: 12.5rem 0;
+  background-color: #f9f9f9;
+}
+.steps__title {
+  color: #101010;
+}
+.steps__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.68rem;
+}
+.steps__inner::before {
+  content: "";
+  padding-top: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 6.3rem;
+  height: 97%;
+  width: 1px;
+  background-color: #368b3c;
+}
+.steps__item {
+  display: flex;
+  flex-direction: row;
+  gap: 2.7rem;
+}
+.steps__item span {
+  align-self: center;
+  color: #368b3c;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.steps__icon {
+  width: 4rem;
+  height: 4rem;
+  z-index: 1;
+}
+.steps__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.steps__description strong {
+  font-family: "Montserrat600", sans-serif;
+  font-weight: 600;
+}
+.steps__heading {
+  font-family: "Montserrat700", sans-serif;
+  font-size: 1.313rem;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.073rem;
 }

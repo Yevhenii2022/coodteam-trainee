@@ -1,0 +1,68 @@
+.steps {
+	padding: 12.5rem 0;
+	background-color: $white-page;
+
+	&__title {
+		color: $black-text;
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 2.68rem;
+
+		&::before {
+			content: '';
+			padding-top: 0.3rem;
+			position: absolute;
+			top: 0;
+			left: 6.3rem;
+			height: 97%;
+			width: 1px;
+			background-color: $green;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: row;
+		gap: 2.7rem;
+
+		span {
+			align-self: center;
+			color: $green;
+			font-family: $mont600;
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 1.4;
+		}
+	}
+
+	&__icon {
+		width: 4rem;
+		height: 4rem;
+		z-index: 1;
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-family: $mont400;
+		font-size: 1rem;
+		line-height: 1.4;
+
+		strong {
+			font-family: $mont600;
+			font-weight: 600;
+		}
+	}
+
+	&__heading {
+		font-family: $mont700;
+		font-size: 1.313rem;
+		font-weight: 700;
+		line-height: 1.22;
+		letter-spacing: 0.073rem;
+	}
+}

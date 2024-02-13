@@ -1,5 +1,6 @@
 //Colors
 $white: #fff;
+$white-page: #f9f9f9;
 $black: #000;
 $black-text: #101010;
 $green: #368b3c;
@@ -9,11 +10,17 @@ $disabled: #c7c7c7;
 $red-alert: #e83942;
 
 //fonts
-$mont400: "Montserrat400", sans-serif;
-$mont500: "Montserrat500", sans-serif;
-$mont600: "Montserrat600", sans-serif;
-$mont700: "Montserrat700", sans-serif;
-$mont800: "Montserrat800", sans-serif;
+$mont400: 'Montserrat400',
+	sans-serif;
+$mont500: 'Montserrat500',
+	sans-serif;
+$mont600: 'Montserrat600',
+	sans-serif;
+$mont700: 'Montserrat700',
+	sans-serif;
+$mont800: 'Montserrat800',
+	sans-serif;
 
 //Transition
-$transition: all 0.3s ease-in-out;
+$transition: all
+	0.3s ease-in-out;
