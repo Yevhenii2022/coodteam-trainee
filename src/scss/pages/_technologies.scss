@@ -1,23 +1,30 @@
 .technologies {
 	margin-top: -4.313rem;
-	padding-bottom: 12.5rem;
+	padding-bottom: 12.1rem;
 	border-radius: 0 0
 		2rem 2rem;
 	background-color: $black-text;
 
 	&__title {
-		margin-bottom: 6.667rem;
+		margin-bottom: 6.56rem;
 	}
 
 	.technologies__slider {
-		padding: 0 11rem;
+		padding: 0
+			8.2rem;
 	}
 
 	&__socials {
+		padding-bottom: 1rem;
 		height: fit-content;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 5.375rem;
+		justify-content: center;
+		gap: 3.3rem;
+
+		&:first-child {
+			padding-left: 1.3rem;
+		}
 
 		@include media(
 			tablet
@@ -28,11 +35,86 @@
 		}
 
 		.technologies__slide {
+			margin-right: 2.5rem;
 			width: fit-content;
-			min-height: 5rem;
+			min-height: 4.375rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: $transition;
+			filter: brightness(
+					0
+				)
+				saturate(
+					100%
+				)
+				invert(100%)
+				sepia(100%)
+				saturate(0%)
+				hue-rotate(
+					73deg
+				)
+				brightness(
+					101%
+				)
+				contrast(
+					101%
+				);
+
+			&:has(
+					.uniq-svg
+				) {
+				filter: none;
+				svg {
+					.uniq-svg__path {
+						filter: brightness(
+								0
+							)
+							saturate(
+								100%
+							)
+							invert(
+								100%
+							)
+							sepia(
+								100%
+							)
+							saturate(
+								0%
+							)
+							hue-rotate(
+								73deg
+							)
+							brightness(
+								101%
+							)
+							contrast(
+								101%
+							);
+						transition: $transition;
+					}
+				}
+
+				&
+					.uniq-svg__path--black {
+					fill: $black;
+					transition: $transition;
+				}
+
+				&:hover,
+				&:focus {
+					svg {
+						.uniq-svg__path {
+							filter: none;
+						}
+					}
+
+					&
+						.uniq-svg__path--black {
+						fill: $white;
+					}
+				}
+			}
 
 			@include media(
 				tablet
@@ -41,39 +123,14 @@
 			}
 
 			svg {
-				width: auto;
+				max-width: 6.125rem;
 				height: 4rem;
-				transition: $transition;
-				filter: brightness(
-						0
-					)
-					saturate(
-						100%
-					)
-					invert(
-						100%
-					)
-					sepia(
-						100%
-					)
-					saturate(
-						0%
-					)
-					hue-rotate(
-						73deg
-					)
-					brightness(
-						101%
-					)
-					contrast(
-						101%
-					);
+			}
 
-				&:hover,
-				&:focus {
-					scale: 1.3;
-					filter: none;
-				}
+			&:hover,
+			&:focus {
+				scale: 1.2;
+				filter: none;
 			}
 		}
 	}

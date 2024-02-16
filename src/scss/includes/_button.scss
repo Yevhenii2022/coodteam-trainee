@@ -146,6 +146,14 @@
 			background-color: $green-action;
 		}
 	}
+
+	&:has(
+			.form__button:disabled
+		) {
+		&::before {
+			background-color: $disabled;
+		}
+	}
 }
 
 .form__button {
@@ -175,9 +183,6 @@
 			0.5
 		);
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 24' fill='none'%3E%3Ccircle cx='11.5' cy='12' r='11.5' fill='%23A9A9A9'/%3E%3Cpath stroke='%23fff' d='M6.838 11.69h9.013M12.432 7.96l3.73 3.73-3.73 3.729'/%3E%3C/svg%3E");
-		.form__submit::before {
-			background-color: $disabled;
-		}
 	}
 }
 

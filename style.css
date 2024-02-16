@@ -217,6 +217,9 @@ button {
 .form__submit:active::before {
   background-color: #27792d;
 }
+.form__submit:has(.form__button:disabled)::before {
+  background-color: #c7c7c7;
+}
 
 .form__button {
   width: 100%;
@@ -236,9 +239,6 @@ button {
 .form__button:disabled {
   color: rgba(16, 16, 16, 0.5);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23 24' fill='none'%3E%3Ccircle cx='11.5' cy='12' r='11.5' fill='%23A9A9A9'/%3E%3Cpath stroke='%23fff' d='M6.838 11.69h9.013M12.432 7.96l3.73 3.73-3.73 3.729'/%3E%3C/svg%3E");
-}
-.form__button:disabled .form__submit::before {
-  background-color: #c7c7c7;
 }
 
 .button__delete {
@@ -1088,21 +1088,26 @@ button {
 
 .technologies {
   margin-top: -4.313rem;
-  padding-bottom: 12.5rem;
+  padding-bottom: 12.1rem;
   border-radius: 0 0 2rem 2rem;
   background-color: #101010;
 }
 .technologies__title {
-  margin-bottom: 6.667rem;
+  margin-bottom: 6.56rem;
 }
 .technologies .technologies__slider {
-  padding: 0 11rem;
+  padding: 0 8.2rem;
 }
 .technologies__socials {
+  padding-bottom: 1rem;
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  gap: 5.375rem;
+  justify-content: center;
+  gap: 3.3rem;
+}
+.technologies__socials:first-child {
+  padding-left: 1.3rem;
 }
 @media (max-width: 1025px) {
   .technologies__socials {
@@ -1112,11 +1117,31 @@ button {
   }
 }
 .technologies__socials .technologies__slide {
+  margin-right: 2.5rem;
   width: fit-content;
-  min-height: 5rem;
+  min-height: 4.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
+}
+.technologies__socials .technologies__slide:has(.uniq-svg) {
+  filter: none;
+}
+.technologies__socials .technologies__slide:has(.uniq-svg) svg .uniq-svg__path {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
+  transition: all 0.3s ease-in-out;
+}
+.technologies__socials .technologies__slide:has(.uniq-svg) .uniq-svg__path--black {
+  fill: #000;
+  transition: all 0.3s ease-in-out;
+}
+.technologies__socials .technologies__slide:has(.uniq-svg):hover svg .uniq-svg__path, .technologies__socials .technologies__slide:has(.uniq-svg):focus svg .uniq-svg__path {
+  filter: none;
+}
+.technologies__socials .technologies__slide:has(.uniq-svg):hover .uniq-svg__path--black, .technologies__socials .technologies__slide:has(.uniq-svg):focus .uniq-svg__path--black {
+  fill: #fff;
 }
 @media (max-width: 1025px) {
   .technologies__socials .technologies__slide {
@@ -1124,12 +1149,10 @@ button {
   }
 }
 .technologies__socials .technologies__slide svg {
-  width: auto;
+  max-width: 6.125rem;
   height: 4rem;
-  transition: all 0.3s ease-in-out;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
 }
-.technologies__socials .technologies__slide svg:hover, .technologies__socials .technologies__slide svg:focus {
-  scale: 1.3;
+.technologies__socials .technologies__slide:hover, .technologies__socials .technologies__slide:focus {
+  scale: 1.2;
   filter: none;
 }
