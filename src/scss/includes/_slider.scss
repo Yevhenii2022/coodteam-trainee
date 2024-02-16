@@ -1,6 +1,7 @@
 .services__swiper-pagination,
 .portfolio__swiper-pagination,
 .clients__swiper-pagination,
+.technologies__swiper-pagination,
 .about__swiper-pagination {
 	margin: 1.985rem
 		auto 0;
@@ -12,7 +13,8 @@
 	padding-right: 9.5rem;
 }
 
-.about__swiper-pagination {
+.about__swiper-pagination,
+.technologies__swiper-pagination {
 	@media (min-width: 1025px) {
 		margin: 0;
 	}
@@ -28,6 +30,7 @@
 .services__swiper-pagination--span.swiper-pagination-bullet,
 .portfolio__swiper-pagination--span.swiper-pagination-bullet,
 .clients__swiper-pagination--span.swiper-pagination-bullet,
+.technologies__swiper-pagination--span.swiper-pagination-bullet,
 .about__swiper-pagination--span.swiper-pagination-bullet {
 	width: 0.667rem;
 	height: 0.667rem;
@@ -51,6 +54,7 @@
 
 .services__swiper-pagination--span.swiper-pagination-bullet-active,
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
+.technologies__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {
 	background: $green;
 }

@@ -17,9 +17,9 @@
 			padding-top: 0.3rem;
 			position: absolute;
 			top: 0;
-			left: 6.3rem;
+			left: 6.4rem;
 			height: 97%;
-			width: 1px;
+			width: 0.063rem;
 			background-color: $green;
 		}
 	}
@@ -29,6 +29,7 @@
 		gap: 2.7rem;
 
 		span {
+			width: 1.688rem;
 			align-self: center;
 			color: $green;
 			font-family: $mont600;

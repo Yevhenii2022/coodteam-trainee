@@ -1,5 +1,5 @@
 html {
-	font-size: 1.042vw;
+	font-size: 1.042vw; // font size 15px
 
 	@include media(
 		tablet
@@ -9,7 +9,7 @@ html {
 	@include media(
 		mobile
 	) {
-		font-size: 4vw;
+		font-size: 4vw; // font size 15px
 	}
 }
 

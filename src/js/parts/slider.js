@@ -196,6 +196,47 @@ document.addEventListener(
 					},
 				);
 		}
+
+		if (
+			window.innerWidth <
+			1025
+		) {
+			var technologies =
+				new Swiper(
+					'.technologies__slider',
+					{
+						slidesPerView: 4,
+						loop: true,
+						speed: 1000,
+						keyboard:
+							{
+								enabled: true,
+							},
+						pagination:
+							{
+								el: '.technologies__swiper-pagination',
+								clickable: true,
+								renderBullet:
+									function (
+										index,
+										className,
+									) {
+										return (
+											'<span class="technologies__swiper-pagination--span ' +
+											className +
+											'"></span>'
+										);
+									},
+							},
+						breakpoints:
+							{
+								768: {
+									slidesPerView: 6,
+								},
+							},
+					},
+				);
+		}
 	},
 );
 

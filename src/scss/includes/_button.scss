@@ -69,6 +69,15 @@
 	}
 }
 
+.header__button {
+	p {
+		z-index: 1;
+		// strong {
+		// 	display: none;
+		// }
+	}
+}
+
 .footer__button {
 	color: $white;
 	svg {

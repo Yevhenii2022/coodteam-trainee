@@ -1,0 +1,80 @@
+.technologies {
+	margin-top: -4.313rem;
+	padding-bottom: 12.5rem;
+	border-radius: 0 0
+		2rem 2rem;
+	background-color: $black-text;
+
+	&__title {
+		margin-bottom: 6.667rem;
+	}
+
+	.technologies__slider {
+		padding: 0 11rem;
+	}
+
+	&__socials {
+		height: fit-content;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5.375rem;
+
+		@include media(
+			tablet
+		) {
+			flex-wrap: nowrap;
+			gap: none;
+			justify-content: inherit;
+		}
+
+		.technologies__slide {
+			width: fit-content;
+			min-height: 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include media(
+				tablet
+			) {
+				width: auto;
+			}
+
+			svg {
+				width: auto;
+				height: 4rem;
+				transition: $transition;
+				filter: brightness(
+						0
+					)
+					saturate(
+						100%
+					)
+					invert(
+						100%
+					)
+					sepia(
+						100%
+					)
+					saturate(
+						0%
+					)
+					hue-rotate(
+						73deg
+					)
+					brightness(
+						101%
+					)
+					contrast(
+						101%
+					);
+
+				&:hover,
+				&:focus {
+					scale: 1.3;
+					filter: none;
+				}
+			}
+		}
+	}
+}

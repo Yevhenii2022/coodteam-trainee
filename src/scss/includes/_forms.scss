@@ -119,6 +119,16 @@
 			display: none;
 		}
 	}
+
+	&__submit {
+		input {
+			font-family: $mont500;
+			font-size: 0.875rem;
+			font-weight: 500;
+			line-height: 1.067rem;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .wpcf7-not-valid-tip {

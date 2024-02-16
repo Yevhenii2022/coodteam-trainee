@@ -12,6 +12,8 @@ get_header();
 
   <?php get_template_part('template-parts/about'); ?>
 
+  <?php get_template_part('template-parts/technologies'); ?>
+
   <?php get_template_part('template-parts/steps'); ?>
 
   <?php get_template_part('template-parts/popup'); ?>

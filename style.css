@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 @font-face {
   font-display: swap;
   font-family: "Montserrat400";
@@ -163,6 +163,10 @@ button {
   background-color: #4a9f50;
 }
 
+.header__button p {
+  z-index: 1;
+}
+
 .footer__button {
   color: #fff;
 }
@@ -256,6 +260,7 @@ button {
 .services__swiper-pagination,
 .portfolio__swiper-pagination,
 .clients__swiper-pagination,
+.technologies__swiper-pagination,
 .about__swiper-pagination {
   margin: 1.985rem auto 0;
   display: flex;
@@ -267,7 +272,8 @@ button {
 }
 
 @media (min-width: 1025px) {
-  .about__swiper-pagination {
+  .about__swiper-pagination,
+  .technologies__swiper-pagination {
     margin: 0;
   }
 }
@@ -282,6 +288,7 @@ button {
 .services__swiper-pagination--span.swiper-pagination-bullet,
 .portfolio__swiper-pagination--span.swiper-pagination-bullet,
 .clients__swiper-pagination--span.swiper-pagination-bullet,
+.technologies__swiper-pagination--span.swiper-pagination-bullet,
 .about__swiper-pagination--span.swiper-pagination-bullet {
   width: 0.667rem;
   height: 0.667rem;
@@ -295,6 +302,7 @@ button {
 
 .services__swiper-pagination--span.swiper-pagination-bullet-active,
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
+.technologies__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {
   background: #368b3c;
 }
@@ -373,6 +381,13 @@ button {
 }
 .form__file input[type=file] {
   display: none;
+}
+.form__submit input {
+  font-family: "Montserrat500", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.067rem;
+  text-transform: uppercase;
 }
 
 .wpcf7-not-valid-tip {
@@ -556,6 +571,12 @@ button {
 .hero__title strong {
   color: #368b3c;
 }
+@media (max-width: 541px) {
+  .hero__title {
+    width: 100%;
+    font-size: 2.4rem;
+  }
+}
 .hero__text {
   max-width: 29.5rem;
   display: flex;
@@ -627,9 +648,9 @@ button {
   transition: all 0.3s ease-in-out;
 }
 .services__term {
-  margin-bottom: 1.667rem;
+  margin-bottom: 1.9rem;
   display: inline-flex;
-  padding: 0.56rem 1rem;
+  padding: 0.46rem 1rem;
   color: rgba(16, 16, 16, 0.7);
   border: 0.067rem solid rgba(16, 16, 16, 0.1);
   border-radius: 6.667rem;
@@ -704,8 +725,6 @@ button {
   stroke: #fff;
 }
 .portfolio__image {
-  min-width: 21.867rem;
-  min-height: 21.867rem;
   object-fit: cover;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -714,8 +733,8 @@ button {
   transition: all 0.3s ease-in-out;
 }
 .portfolio__image img {
-  width: 100%;
-  height: 100%;
+  width: 21.867rem;
+  height: 21.867rem;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
@@ -891,7 +910,6 @@ button {
 }
 .popup__contacts {
   margin-right: 10.733rem;
-  padding-top: 2.267rem;
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
@@ -1024,9 +1042,9 @@ button {
   padding-top: 0.3rem;
   position: absolute;
   top: 0;
-  left: 6.3rem;
+  left: 6.4rem;
   height: 97%;
-  width: 1px;
+  width: 0.063rem;
   background-color: #368b3c;
 }
 .steps__item {
@@ -1035,6 +1053,7 @@ button {
   gap: 2.7rem;
 }
 .steps__item span {
+  width: 1.688rem;
   align-self: center;
   color: #368b3c;
   font-family: "Montserrat600", sans-serif;
@@ -1065,4 +1084,52 @@ button {
   font-weight: 700;
   line-height: 1.22;
   letter-spacing: 0.073rem;
+}
+
+.technologies {
+  margin-top: -4.313rem;
+  padding-bottom: 12.5rem;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #101010;
+}
+.technologies__title {
+  margin-bottom: 6.667rem;
+}
+.technologies .technologies__slider {
+  padding: 0 11rem;
+}
+.technologies__socials {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5.375rem;
+}
+@media (max-width: 1025px) {
+  .technologies__socials {
+    flex-wrap: nowrap;
+    gap: none;
+    justify-content: inherit;
+  }
+}
+.technologies__socials .technologies__slide {
+  width: fit-content;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1025px) {
+  .technologies__socials .technologies__slide {
+    width: auto;
+  }
+}
+.technologies__socials .technologies__slide svg {
+  width: auto;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(101%) contrast(101%);
+}
+.technologies__socials .technologies__slide svg:hover, .technologies__socials .technologies__slide svg:focus {
+  scale: 1.3;
+  filter: none;
 }

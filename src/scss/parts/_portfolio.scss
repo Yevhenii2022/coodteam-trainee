@@ -36,8 +36,6 @@
 	}
 
 	&__image {
-		min-width: 21.867rem;
-		min-height: 21.867rem;
 		object-fit: cover;
 		overflow: hidden;
 		transition: $transition;
@@ -48,8 +46,8 @@
 		transition: $transition;
 
 		img {
-			width: 100%;
-			height: 100%;
+			width: 21.867rem;
+			height: 21.867rem;
 			border-radius: 50%;
 			transition: $transition;
 			overflow: hidden;
