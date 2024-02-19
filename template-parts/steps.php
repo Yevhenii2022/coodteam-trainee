@@ -14,11 +14,8 @@ if ($steps_list) : ?>
             $heading = get_sub_field('steps_heading') ?? '';
             $text = get_sub_field('steps_text') ?? '';
             $icon = get_sub_field('steps_icon') ?? '';
-            $ch = curl_init($icon);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $svgContent = curl_exec($ch);
-            curl_close($ch);
+            $file_path = get_attached_file($icon);
+            $svg_content = file_get_contents($file_path);
           ?>
             <div class="steps__item">
               <span>
@@ -30,8 +27,8 @@ if ($steps_list) : ?>
                 $counter++; ?>
               </span>
               <div class="steps__icon">
-                <?php if ($icon) {
-                  echo $svgContent;
+                <?php if ($svg_content !== false) {
+                  echo $svg_content;
                 } ?>
               </div>
               <div class="steps__description">

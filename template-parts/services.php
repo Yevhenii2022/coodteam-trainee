@@ -9,7 +9,7 @@ $services_query = new WP_Query($args);
 if ($services_query->have_posts()) :
 ?>
   <section class="services">
-    <div class="container">
+    <div class="container container--left-media">
       <div class="services__wrapper">
         <h2 class="services__title section__title"><?= $title ?></h2>
 

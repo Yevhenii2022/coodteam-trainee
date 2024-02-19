@@ -15,6 +15,12 @@
 	text-transform: uppercase;
 	transition: $transition;
 
+	@include media(
+		mobile
+	) {
+		width: 100%;
+	}
+
 	&::before {
 		content: '';
 		width: 100%;
@@ -70,11 +76,39 @@
 }
 
 .header__button {
+	@include media(
+		mobile
+	) {
+		margin-top: 0.133rem;
+		padding: 0.633rem
+			1.133rem;
+		&::before {
+			border-radius: 0.733rem;
+		}
+
+		&:hover,
+		&:focus {
+			&::before {
+				height: 2.5rem;
+			}
+		}
+
+		svg {
+			display: none;
+		}
+	}
 	p {
 		z-index: 1;
-		// strong {
-		// 	display: none;
-		// }
+		@include media(
+			mobile
+		) {
+			font-size: 0.733rem;
+			line-height: 1.21;
+
+			strong {
+				display: none;
+			}
+		}
 	}
 }
 

@@ -1,12 +1,23 @@
 .footer {
 	padding: 13.8rem 0
 		1.933rem 0;
+	@include media(
+		mobile
+	) {
+		padding: 12.667rem
+			0 1.067rem 0;
+	}
 
 	&__wrapper {
 		height: 37rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		@include media(
+			mobile
+		) {
+			height: 28.1rem;
+		}
 	}
 
 	&__inner {
@@ -14,6 +25,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include media(
+			mobile
+		) {
+			margin: 0;
+		}
 	}
 
 	&__title {
@@ -22,6 +38,11 @@
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1.4;
+		@include media(
+			mobile
+		) {
+			font-size: 2.133rem;
+		}
 	}
 
 	&__text {
@@ -30,6 +51,12 @@
 		font-size: 1.6rem;
 		font-weight: 500;
 		line-height: 1.4;
+		@include media(
+			mobile
+		) {
+			margin-bottom: 2.7rem;
+			font-size: 1.2rem;
+		}
 	}
 
 	&__box {
@@ -48,6 +75,26 @@
 		&:hover,
 		&:focus {
 			height: 7.467rem;
+			@include media(
+				mobile
+			) {
+				height: 4.219rem;
+			}
+		}
+
+		@include media(
+			tablet
+		) {
+			justify-content: space-between;
+			gap: 0;
+		}
+		@include media(
+			mobile
+		) {
+			padding: 0.933rem
+				1.333rem;
+			height: 3.467rem;
+			border-radius: 1.4rem;
 		}
 	}
 
@@ -55,6 +102,14 @@
 		svg {
 			width: 6.267rem;
 			height: 1.867rem;
+
+			@include media(
+				mobile
+			) {
+				margin-top: 0.37rem;
+				width: 4.843rem;
+				height: 1.4rem;
+			}
 		}
 	}
 
@@ -69,6 +124,12 @@
 		display: flex;
 		align-items: center;
 		gap: 1.86rem;
+
+		@include media(
+			tablet
+		) {
+			display: none;
+		}
 	}
 
 	&__icon {
@@ -124,6 +185,17 @@
 					color: $green;
 				}
 			}
+
+			// @include media(
+			// 	mobile
+			// ) {
+			// 	&
+			// 		a:not(
+			// 			:first-child
+			// 		) {
+			// 		display: none;
+			// 	}
+			// }
 		}
 
 		svg {
@@ -131,6 +203,12 @@
 			height: 2.125rem;
 			fill: $white;
 			transition: $transition;
+			@include media(
+				mobile
+			) {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
 		}
 
 		span {
@@ -140,6 +218,19 @@
 			font-size: 1.067rem;
 			font-weight: 500;
 			transition: $transition;
+
+			@include media(
+				mobile
+			) {
+				margin-left: 0.1rem;
+				font-size: 0.867rem;
+			}
+		}
+
+		@include media(
+			mobile
+		) {
+			gap: 0.45rem;
 		}
 	}
 }

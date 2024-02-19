@@ -1,6 +1,12 @@
 .services {
 	padding: 9.267rem
 		0 13.333rem 0;
+	@include media(
+		mobile
+	) {
+		padding: 4.7rem
+			0;
+	}
 
 	&__title {
 		color: $black-text;
@@ -25,6 +31,15 @@
 		border-radius: 1.333rem;
 		background-color: $white;
 		transition: $transition;
+		@include media(
+			mobile
+		) {
+			border-radius: 1rem;
+			padding: 1.333rem
+				1.333rem
+				1.2rem
+				1.333rem;
+		}
 
 		&:hover,
 		&:focus {
@@ -56,7 +71,7 @@
 			}
 
 			svg {
-				scale: 1.48;
+				scale: 1.15;
 				circle {
 					fill: $white;
 				}
@@ -141,6 +156,13 @@
 		&-arrow {
 			width: 1.933rem;
 			height: 1.933rem;
+			@include media(
+				mobile
+			) {
+				align-self: center;
+				width: 2.867rem;
+				height: 2.867rem;
+			}
 
 			svg {
 				width: 100%;

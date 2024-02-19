@@ -15,15 +15,12 @@
           <?php while (have_rows('technologies_list', 'options')) : the_row();
             $image = get_sub_field('technologies_icon');
             $link = get_sub_field('technologies_link') ?? '';
-            $ch = curl_init($image);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $svgContent = curl_exec($ch);
-            curl_close($ch);
+            $file_path = get_attached_file($image);
+            $svg_content = file_get_contents($file_path);
           ?>
             <a class="technologies__slide swiper-slide" href="<?= $link; ?>" target="_blank">
-              <?php if ($image) {
-                echo $svgContent;
+              <?php if ($svg_content !== false) {
+                echo $svg_content;
               } ?>
             </a>
           <?php endwhile; ?>

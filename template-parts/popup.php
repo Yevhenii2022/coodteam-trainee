@@ -30,12 +30,14 @@ $title = get_field('form_title', 'options');
             $image = get_sub_field('contacts_icon');
             $link = get_sub_field('contacts_icon_link') ?? '';
             $name = get_sub_field('contacts_name') ?? '';
+            $file_path = get_attached_file($image);
+            $svg_content = file_get_contents($file_path);
           ?>
             <?php if ($link) : ?>
               <a href="<?= $link; ?>" target="_blank">
               <?php endif; ?>
-              <?php if ($image) {
-                echo file_get_contents($image);
+              <?php if ($svg_content !== false) {
+                echo $svg_content;
               } ?>
               <?php if ($name) : ?>
                 <span><?= $name; ?></span>

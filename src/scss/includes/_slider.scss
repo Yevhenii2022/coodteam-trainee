@@ -11,6 +11,11 @@
 
 .clients__swiper-pagination {
 	padding-right: 9.5rem;
+	@include media(
+		mobile
+	) {
+		padding-right: 0;
+	}
 }
 
 .about__swiper-pagination,
@@ -41,6 +46,12 @@
 		0.1
 	);
 	opacity: 1;
+	@include media(
+		mobile
+	) {
+		width: 0.533rem;
+		height: 0.533rem;
+	}
 }
 
 .services__swiper-pagination--span.swiper-pagination-bullet {
@@ -53,6 +64,7 @@
 }
 
 .services__swiper-pagination--span.swiper-pagination-bullet-active,
+.portfolio__swiper-pagination--span.swiper-pagination-bullet-active,
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
 .technologies__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {

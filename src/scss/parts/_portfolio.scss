@@ -4,11 +4,22 @@
 	border-radius: 2rem
 		2rem 0rem 0rem;
 	background-color: $black-text;
+	@include media(
+		mobile
+	) {
+		padding: 4.7rem
+			0;
+	}
 
 	&__link {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+		@include media(
+			mobile
+		) {
+			gap: 1.9rem;
+		}
 
 		&:hover,
 		&:focus {
@@ -52,6 +63,12 @@
 			transition: $transition;
 			overflow: hidden;
 			perspective: 66.667rem;
+			@include media(
+				mobile
+			) {
+				width: 20.267rem;
+				height: 20.267rem;
+			}
 		}
 	}
 
@@ -60,6 +77,12 @@
 			0.767rem;
 		display: flex;
 		justify-content: space-between;
+		@include media(
+			mobile
+		) {
+			padding: 0
+				1.3rem;
+		}
 
 		svg {
 			width: 2.867rem;

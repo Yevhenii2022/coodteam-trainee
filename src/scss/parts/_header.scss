@@ -5,6 +5,11 @@
 	z-index: 5;
 	transition: all 1s
 		ease-in-out;
+	@include media(
+		mobile
+	) {
+		top: 1.333rem;
+	}
 
 	&--hidden {
 		opacity: 0;
@@ -23,10 +28,26 @@
 		border-radius: 2rem;
 		background-color: $black;
 		transition: $transition;
+		@include media(
+			mobile
+		) {
+			width: fit-content;
+			height: 3.467rem;
+			padding: 0.667rem
+				0.733rem;
+			justify-content: flex-start;
+			gap: 1.211rem;
+			border-radius: 1.4rem;
+		}
 
 		&:hover,
 		&:focus {
 			height: 7.333rem;
+			@include media(
+				mobile
+			) {
+				height: 4.219rem;
+			}
 		}
 	}
 
@@ -34,24 +55,48 @@
 		svg {
 			width: 6.267rem;
 			height: 1.867rem;
+			@include media(
+				mobile
+			) {
+				margin-top: 0.3rem;
+				width: 4.843rem;
+				height: 1.4rem;
+			}
 		}
 	}
 
 	&__contacts {
 		display: flex;
 		gap: 4.2rem;
+		@include media(
+			mobile
+		) {
+			gap: 1.211rem;
+		}
 	}
 
 	&__list {
 		display: flex;
 		gap: 2.74rem;
 		align-items: center;
+		@include media(
+			mobile
+		) {
+			margin-top: 0.3rem;
+			gap: 1rem;
+		}
 
 		svg {
 			width: 2.063rem;
 			height: 2.125rem;
 			fill: $white;
 			transition: $transition;
+			@include media(
+				mobile
+			) {
+				width: 1.8rem;
+				height: 1.8rem;
+			}
 
 			&:hover,
 			&:focus {

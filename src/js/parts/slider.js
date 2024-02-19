@@ -42,8 +42,8 @@ document.addEventListener(
 				new Swiper(
 					'.services__slider',
 					{
-						slidesPerView: 1.5,
-						spaceBetween: 24,
+						slidesPerView: 1.11,
+						spaceBetween: 10,
 						loop: true,
 						speed: 1000,
 						keyboard:
@@ -70,6 +70,7 @@ document.addEventListener(
 							{
 								541: {
 									slidesPerView: 4,
+									spaceBetween: 24,
 									pagination: false,
 								},
 							},
@@ -81,8 +82,8 @@ document.addEventListener(
 			new Swiper(
 				'.portfolio__slider',
 				{
-					slidesPerView: 1.5,
-					spaceBetween: 53,
+					slidesPerView: 1.17,
+					spaceBetween: 10,
 					loop: true,
 					speed: 1000,
 					keyboard:
@@ -108,10 +109,12 @@ document.addEventListener(
 					breakpoints:
 						{
 							768: {
+								spaceBetween: 40,
 								slidesPerView: 2.5,
 								pagination: false,
 							},
 							1024: {
+								spaceBetween: 53,
 								slidesPerView: 3.5,
 								pagination: false,
 							},
@@ -123,8 +126,8 @@ document.addEventListener(
 			new Swiper(
 				'.clients__slider',
 				{
-					slidesPerView: 1.5,
-					spaceBetween: 24,
+					slidesPerView: 1.35,
+					spaceBetween: 10,
 					loop: true,
 					speed: 1000,
 					keyboard:
@@ -150,6 +153,11 @@ document.addEventListener(
 					breakpoints:
 						{
 							541: {
+								spaceBetween: 16,
+								slidesPerView: 3.5,
+							},
+							1024: {
+								spaceBetween: 24,
 								slidesPerView: 4.5,
 							},
 						},
