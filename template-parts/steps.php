@@ -6,7 +6,7 @@ if ($steps_list) : ?>
       <div class="steps__wrapper">
         <?php $title = get_field('steps_title', 'options') ?? '' ?>
         <?php if ($title) : ?>
-          <h2 class="section__title steps__title"><?= $title ?> </h2>
+          <h2 class="section__title steps__title"><?= $title ?></h2>
         <?php endif ?>
 
         <div class="steps__inner">

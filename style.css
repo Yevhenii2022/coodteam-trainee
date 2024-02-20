@@ -59,6 +59,9 @@
   font-weight: 600;
   line-height: 1.4;
 }
+.section__title--black {
+  color: #101010;
+}
 @media (max-width: 541px) {
   .section__title {
     margin-bottom: 2rem;
@@ -1361,6 +1364,100 @@ button {
   font-weight: 700;
   line-height: 1.22;
   letter-spacing: 0.073rem;
+}
+
+.versions {
+  padding: 13.333rem 0;
+}
+@media (max-width: 541px) {
+  .versions {
+    padding: 4.6rem 0 4.667rem 0;
+  }
+}
+.versions__block {
+  display: flex;
+  flex-direction: column;
+}
+.versions__block:not(:last-child) {
+  margin-bottom: 0.533rem;
+}
+.versions__block.active:not(:last-child) {
+  margin-bottom: 1.333rem;
+}
+.versions__block.active .versions__question {
+  color: #fff;
+  background-color: #368b3c;
+  border: 0.067rem solid #368b3c;
+}
+.versions__block.active .versions__answear {
+  border-color: #368b3c;
+}
+.versions__block.active .versions__icon svg {
+  stroke: #fff;
+}
+.versions__block.active .versions__icon svg path:nth-child(2) {
+  stroke: #368b3c;
+}
+.versions__question {
+  padding: 1.333rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+  border: 0.067rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.067rem;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.versions__inner {
+  padding: 2rem 3.867rem 0 3.867rem;
+}
+.versions__answear {
+  margin-top: 0.667rem;
+  max-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border: 0.067rem solid #fff;
+  border-radius: 1.067rem;
+  transition: all 1s ease-in-out;
+}
+.versions__answear h4 {
+  margin-bottom: 1.333rem;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.versions__answear p {
+  margin: 0 0 0.667rem 6.333rem;
+  font-family: "Montserrat600", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.versions__answear ul {
+  margin: 0 0 2rem 9.533rem;
+  list-style: circle;
+}
+.versions__answear li {
+  margin-bottom: 0.533rem;
+  max-width: 42.267rem;
+  list-style: disc;
+  font-family: "Montserrat400", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.versions__icon svg {
+  transition: all 0.3s ease-in-out;
+  width: 2.933rem;
+  height: 2.933rem;
+  stroke: #368b3c;
+}
+.versions__icon svg path {
+  transition: all 0.3s ease-in-out;
 }
 
 .technologies {

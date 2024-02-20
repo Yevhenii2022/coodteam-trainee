@@ -20,6 +20,11 @@
 	font-size: 2.667rem;
 	font-weight: 600;
 	line-height: 1.4;
+
+	&--black {
+		color: $black-text;
+	}
+
 	@include media(
 		mobile
 	) {
