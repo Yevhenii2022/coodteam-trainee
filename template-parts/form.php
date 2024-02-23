@@ -12,7 +12,7 @@
      <label><p>Напишіть вашу задачу</p>[textarea task placeholder "Написати"]</label>
    </div>
    <div class="form__file">
-     <label><p>Прикріпити файл</p> [file file]</label>
+     <label><p class="form__file-text">Прикріпити файл</p> [file file filetypes:pdf|png|jpeg|jpg|doc|docx]</label>
      <button class="button__delete" type="button"></button>
    </div>
  </div>

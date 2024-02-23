@@ -98,21 +98,6 @@
 		}
 	}
 
-	&__logo {
-		svg {
-			width: 6.267rem;
-			height: 1.867rem;
-
-			@include media(
-				mobile
-			) {
-				margin-top: 0.37rem;
-				width: 4.843rem;
-				height: 1.4rem;
-			}
-		}
-	}
-
 	&__contents {
 		display: flex;
 		gap: 1.67rem;
@@ -185,17 +170,6 @@
 					color: $green;
 				}
 			}
-
-			// @include media(
-			// 	mobile
-			// ) {
-			// 	&
-			// 		a:not(
-			// 			:first-child
-			// 		) {
-			// 		display: none;
-			// 	}
-			// }
 		}
 
 		svg {

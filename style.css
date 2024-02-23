@@ -444,6 +444,22 @@ button {
   align-items: center;
   height: 3rem;
 }
+.form__file-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form__file-text img {
+  width: 2rem;
+  height: 2rem;
+}
+.form__file-text span {
+  max-width: 21rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
 .form__file label {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22' stroke='%23368B3C'/%3E%3Cpath d='M22.5 15L22.5 31' stroke='%23368B3C'/%3E%3Cpath d='M30.5 23L14.5 23' stroke='%23368B3C'/%3E%3C/svg%3E");
   background-size: 3rem 3rem;
@@ -471,6 +487,7 @@ button {
 }
 
 .wpcf7-not-valid-tip {
+  width: 28rem;
   position: absolute;
   margin-top: 0.333rem;
   color: #e83942;
@@ -532,17 +549,6 @@ button {
     height: 4.219rem;
   }
 }
-.header__logo svg {
-  width: 6.267rem;
-  height: 1.867rem;
-}
-@media (max-width: 541px) {
-  .header__logo svg {
-    margin-top: 0.3rem;
-    width: 4.843rem;
-    height: 1.4rem;
-  }
-}
 .header__contacts {
   display: flex;
   gap: 4.2rem;
@@ -578,6 +584,18 @@ button {
 .header__list svg:hover, .header__list svg:focus {
   scale: 1.3;
   fill: #368b3c;
+}
+
+.custom-logo {
+  width: 6.267rem;
+  height: 1.867rem;
+}
+@media (max-width: 541px) {
+  .custom-logo {
+    width: 4.843rem;
+    height: 1.4rem;
+    object-fit: contain;
+  }
 }
 
 .footer {
@@ -667,17 +685,6 @@ button {
     border-radius: 1.4rem;
   }
 }
-.footer__logo svg {
-  width: 6.267rem;
-  height: 1.867rem;
-}
-@media (max-width: 541px) {
-  .footer__logo svg {
-    margin-top: 0.37rem;
-    width: 4.843rem;
-    height: 1.4rem;
-  }
-}
 .footer__contents {
   display: flex;
   gap: 1.67rem;
@@ -758,6 +765,7 @@ button {
   border-radius: 0 0 2rem 2rem;
   background-color: #000;
   position: relative;
+  z-index: 3;
 }
 .hero::before {
   content: "";
@@ -770,6 +778,7 @@ button {
   background-size: cover;
   background-position: center;
   border-radius: 0 0 2rem 2rem;
+  z-index: -1;
 }
 @media (max-width: 541px) {
   .hero::before {
@@ -806,6 +815,10 @@ button {
     margin-bottom: 4rem;
     font-size: 1rem;
   }
+}
+
+.single-services .hero__title {
+  font-family: "Montserrat700", sans-serif;
 }
 
 .services {
@@ -1396,7 +1409,7 @@ button {
   stroke: #fff;
 }
 .versions__block.active .versions__icon svg path:nth-child(2) {
-  stroke: #368b3c;
+  transform: rotate(90deg);
 }
 .versions__question {
   padding: 1.333rem 2rem;
@@ -1457,6 +1470,7 @@ button {
   stroke: #368b3c;
 }
 .versions__icon svg path {
+  transform-origin: center;
   transition: all 0.3s ease-in-out;
 }
 

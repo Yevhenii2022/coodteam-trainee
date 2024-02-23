@@ -108,7 +108,7 @@ document.addEventListener(
 						},
 					breakpoints:
 						{
-							768: {
+							541: {
 								spaceBetween: 40,
 								slidesPerView: 2.5,
 								pagination: false,

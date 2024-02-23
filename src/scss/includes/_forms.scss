@@ -91,6 +91,25 @@
 		align-items: center;
 		height: 3rem;
 
+		&-text {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			img {
+				width: 2rem;
+				height: 2rem;
+			}
+
+			span {
+				max-width: 21rem;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 1;
+				overflow: hidden;
+			}
+		}
+
 		label {
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45' fill='none'%3E%3Ccircle cx='22.5' cy='22.5' r='22' stroke='%23368B3C'/%3E%3Cpath d='M22.5 15L22.5 31' stroke='%23368B3C'/%3E%3Cpath d='M30.5 23L14.5 23' stroke='%23368B3C'/%3E%3C/svg%3E");
 			background-size: 3rem
@@ -132,6 +151,7 @@
 }
 
 .wpcf7-not-valid-tip {
+	width: 28rem;
 	position: absolute;
 	margin-top: 0.333rem;
 	color: $red-alert;

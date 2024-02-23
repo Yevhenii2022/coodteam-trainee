@@ -51,20 +51,6 @@
 		}
 	}
 
-	&__logo {
-		svg {
-			width: 6.267rem;
-			height: 1.867rem;
-			@include media(
-				mobile
-			) {
-				margin-top: 0.3rem;
-				width: 4.843rem;
-				height: 1.4rem;
-			}
-		}
-	}
-
 	&__contacts {
 		display: flex;
 		gap: 4.2rem;
@@ -104,5 +90,17 @@
 				fill: $green;
 			}
 		}
+	}
+}
+
+.custom-logo {
+	width: 6.267rem;
+	height: 1.867rem;
+	@include media(
+		mobile
+	) {
+		width: 4.843rem;
+		height: 1.4rem;
+		object-fit: contain;
 	}
 }

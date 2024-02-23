@@ -7,7 +7,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero__wrapper">
-        <h1 class="hero__title main__title"><?php echo $title ?></h1>
+        <h1 class="main__title hero__title"><?php echo $title ?></h1>
         <p class="hero__text"><?= $subtitle ?></p>
         <div class="button hero__button button--contacts">
           <span><?= $button_text ?></span>

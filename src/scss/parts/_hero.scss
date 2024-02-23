@@ -3,6 +3,7 @@
 		2rem 2rem;
 	background-color: $black;
 	position: relative;
+	z-index: 3;
 
 	&::before {
 		content: '';
@@ -16,6 +17,7 @@
 		background-position: center;
 		border-radius: 0
 			0 2rem 2rem;
+		z-index: -1;
 
 		@include media(
 			mobile
@@ -59,5 +61,11 @@
 			margin-bottom: 4rem;
 			font-size: 1rem;
 		}
+	}
+}
+
+.single-services {
+	.hero__title {
+		font-family: $mont700;
 	}
 }

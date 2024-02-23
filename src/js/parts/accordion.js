@@ -1,24 +1,28 @@
 document.addEventListener(
 	'DOMContentLoaded',
 	function () {
-		const versionsList =
+		let accordionList =
 			document.querySelectorAll(
 				'.versions__block',
 			);
 		if (
-			versionsList.length >
+			accordionList.length >
 			0
 		) {
-			versionsList.forEach(
+			accordionList.forEach(
 				item => {
-					item.addEventListener(
+					let question =
+						item.querySelector(
+							'.versions__question',
+						);
+					question.addEventListener(
 						'click',
 						() => {
-							const content =
+							let content =
 								item.querySelector(
 									'.versions__answear',
 								);
-							const isActive =
+							let isActive =
 								item.classList.contains(
 									'active',
 								);
@@ -29,6 +33,8 @@ document.addEventListener(
 								.forEach(
 									block => {
 										if (
+											block !==
+												item &&
 											block.classList.contains(
 												'active',
 											)
@@ -52,6 +58,12 @@ document.addEventListener(
 								content.style.maxHeight =
 									content.scrollHeight +
 									'px';
+							} else {
+								item.classList.remove(
+									'active',
+								);
+								content.style.maxHeight =
+									null;
 							}
 						},
 					);
