@@ -17,6 +17,8 @@ get_header();
 
   <?php get_template_part('template-parts/steps'); ?>
 
+  <?php get_template_part('template-parts/questions'); ?>
+
   <?php get_template_part('template-parts/popup'); ?>
 
   <?php get_template_part('template-parts/success'); ?>

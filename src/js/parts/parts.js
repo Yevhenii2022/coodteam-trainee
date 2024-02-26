@@ -4,4 +4,5 @@ import './slider';
 import './popup';
 import './form';
 import './success';
-import './accordion';
+import './versions';
+import './questions';

@@ -18,18 +18,20 @@ if ($steps_list) : ?>
             $svg_content = file_get_contents($file_path);
           ?>
             <div class="steps__item">
-              <span>
-                <?php if ($counter < 10) {
-                  echo  '[0' . $counter . ']';
-                } else {
-                  echo '[' . $counter . ']';
-                }
-                $counter++; ?>
-              </span>
-              <div class="steps__icon">
-                <?php if ($svg_content !== false) {
-                  echo $svg_content;
-                } ?>
+              <div class="steps__block">
+                <span>
+                  <?php if ($counter < 10) {
+                    echo  '[0' . $counter . ']';
+                  } else {
+                    echo '[' . $counter . ']';
+                  }
+                  $counter++; ?>
+                </span>
+                <div class="steps__icon">
+                  <?php if ($svg_content !== false) {
+                    echo $svg_content;
+                  } ?>
+                </div>
               </div>
               <div class="steps__description">
                 <?php if ($heading) : ?>

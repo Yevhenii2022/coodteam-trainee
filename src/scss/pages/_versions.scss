@@ -1,11 +1,11 @@
 .versions {
 	padding: 13.333rem
-		0;
+		0 12.5rem 0;
 	@include media(
 		mobile
 	) {
-		padding: 4.6rem
-			0 4.667rem 0;
+		padding: 4.7rem
+			0 4.3rem 0;
 	}
 
 	&__block {
@@ -16,6 +16,11 @@
 				:last-child
 			) {
 			margin-bottom: 0.533rem;
+			@include media(
+				mobile
+			) {
+				margin-bottom: 0.2rem;
+			}
 		}
 
 		&.active {
@@ -50,7 +55,7 @@
 	}
 
 	&__question {
-		padding: 1.333rem
+		padding: 1.26rem
 			2rem;
 		display: flex;
 		justify-content: space-between;
@@ -71,12 +76,29 @@
 		cursor: pointer;
 		transition: all
 			1s ease-in-out;
+		@include media(
+			mobile
+		) {
+			padding: 0.9rem
+				1.333rem;
+			font-size: 1.4rem;
+			p {
+				max-width: 15rem;
+			}
+		}
 	}
 
 	&__inner {
 		padding: 2rem
 			3.867rem 0
 			3.867rem;
+		@include media(
+			mobile
+		) {
+			padding: 1.333rem
+				1.333rem 0
+				1.333rem;
+		}
 	}
 
 	&__answear {
@@ -89,6 +111,11 @@
 		border-radius: 1.067rem;
 		transition: all
 			1s ease-in-out;
+		@include media(
+			mobile
+		) {
+			margin-top: 0.3rem;
+		}
 
 		h4 {
 			margin-bottom: 1.333rem;
@@ -96,6 +123,12 @@
 			font-size: 1.4rem;
 			font-weight: 600;
 			line-height: 1.4;
+			@include media(
+				mobile
+			) {
+				margin-bottom: 0.95rem;
+				font-size: 1.2rem;
+			}
 		}
 		p {
 			margin: 0 0
@@ -105,26 +138,46 @@
 			font-size: 1.2rem;
 			font-weight: 600;
 			line-height: 1.4;
+			@include media(
+				mobile
+			) {
+				margin: 0 0
+					0.667rem 0;
+				font-size: 1rem;
+			}
 		}
 
 		ul {
 			margin: 0 0
-				2rem
+				1.3rem
 				9.533rem;
 			list-style: circle;
+			@include media(
+				mobile
+			) {
+				margin: 0 0
+					1.5rem
+					2.5rem;
+			}
 		}
 
 		li {
-			margin-bottom: 0.533rem;
+			margin-bottom: 0.57rem;
 			max-width: 42.267rem;
 			list-style: disc;
 			font-family: $mont400;
 			font-size: 1rem;
 			line-height: 1.4;
+			@include media(
+				mobile
+			) {
+				margin-bottom: 0.53rem;
+			}
 		}
 	}
 
 	&__icon {
+		display: flex;
 		svg {
 			transition: $transition;
 			width: 2.933rem;
