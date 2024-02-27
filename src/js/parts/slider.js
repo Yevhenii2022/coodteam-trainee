@@ -245,6 +245,90 @@ document.addEventListener(
 					},
 				);
 		}
+
+		var desktop =
+			new Swiper(
+				'.desktop__slider',
+				{
+					slidesPerView: 0.8,
+					// spaceBetween: 10,
+					loop: true,
+					speed: 1000,
+					keyboard:
+						{
+							enabled: true,
+						},
+					pagination:
+						{
+							el: '.desktop__swiper-pagination',
+							clickable: true,
+							renderBullet:
+								function (
+									index,
+									className,
+								) {
+									return (
+										'<span class="desktop__swiper-pagination--span ' +
+										className +
+										'"></span>'
+									);
+								},
+						},
+					breakpoints:
+						{
+							541: {
+								spaceBetween: 16,
+								slidesPerView: 1.15,
+							},
+							1024: {
+								spaceBetween: 24,
+								slidesPerView: 1.3,
+							},
+						},
+				},
+			);
+
+		var mobile =
+			new Swiper(
+				'.mobile__slider',
+				{
+					slidesPerView: 1.35,
+					spaceBetween: 11,
+					loop: true,
+					speed: 1000,
+					keyboard:
+						{
+							enabled: true,
+						},
+					pagination:
+						{
+							el: '.mobile__swiper-pagination',
+							clickable: true,
+							renderBullet:
+								function (
+									index,
+									className,
+								) {
+									return (
+										'<span class="mobile__swiper-pagination--span ' +
+										className +
+										'"></span>'
+									);
+								},
+						},
+					breakpoints:
+						{
+							541: {
+								spaceBetween: 16,
+								slidesPerView: 2.5,
+							},
+							1024: {
+								spaceBetween: 24,
+								slidesPerView: 3.5,
+							},
+						},
+				},
+			);
 	},
 );
 

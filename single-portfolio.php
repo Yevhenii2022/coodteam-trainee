@@ -3,12 +3,11 @@ get_header();
 ?>
 <main>
 
-  <section>
-    <?= the_title(); ?>
-    <div>
-      <?= the_content(); ?>
-    </div>
-  </section>
+  <?php get_template_part('template-parts/portfolio-hero'); ?>
+
+  <?php get_template_part('template-parts/desktop'); ?>
+
+  <?php get_template_part('template-parts/mobile'); ?>
 
   <?php get_template_part('template-parts/portfolio'); ?>
 

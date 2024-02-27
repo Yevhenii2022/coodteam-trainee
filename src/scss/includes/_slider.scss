@@ -1,6 +1,8 @@
 .services__swiper-pagination,
 .portfolio__swiper-pagination,
 .clients__swiper-pagination,
+.desktop__swiper-pagination,
+.mobile__swiper-pagination,
 .technologies__swiper-pagination,
 .about__swiper-pagination {
 	margin: 1.985rem
@@ -35,6 +37,8 @@
 .services__swiper-pagination--span.swiper-pagination-bullet,
 .portfolio__swiper-pagination--span.swiper-pagination-bullet,
 .clients__swiper-pagination--span.swiper-pagination-bullet,
+.desktop__swiper-pagination--span.swiper-pagination-bullet,
+.mobile__swiper-pagination--span.swiper-pagination-bullet,
 .technologies__swiper-pagination--span.swiper-pagination-bullet,
 .about__swiper-pagination--span.swiper-pagination-bullet {
 	width: 0.667rem;
@@ -66,6 +70,8 @@
 .services__swiper-pagination--span.swiper-pagination-bullet-active,
 .portfolio__swiper-pagination--span.swiper-pagination-bullet-active,
 .clients__swiper-pagination--span.swiper-pagination-bullet-active,
+.desktop__swiper-pagination--span.swiper-pagination-bullet-active,
+.mobile__swiper-pagination--span.swiper-pagination-bullet-active,
 .technologies__swiper-pagination--span.swiper-pagination-bullet-active,
 .about__swiper-pagination--span.swiper-pagination-bullet-active {
 	background: $green;

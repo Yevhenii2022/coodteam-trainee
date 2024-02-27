@@ -1,0 +1,20 @@
+.mobile {
+	padding-bottom: 13.333rem;
+	@include media(
+		mobile
+	) {
+		padding-bottom: 13.333rem;
+	}
+
+	&__image {
+		img {
+			display: block;
+			width: 17.6rem;
+			height: 34.467rem;
+			border-radius: 0.667rem;
+			transition: $transition;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+}
