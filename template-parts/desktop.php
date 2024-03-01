@@ -12,18 +12,19 @@
       <div class="desktop__slider swiper ">
         <div class="swiper-wrapper">
 
-          <?php while (have_rows('gallery')) : the_row();
-            $image = get_sub_field('desktop');
+          <?php
+          // $gallery = get_field('gallery_mobile');
+          $gallery = get_field('gallery');
+          $mobile =  $gallery['mobile'];
+          // var_dump($gallery);
+          // while (have_rows($mobile)) : the_row();
+          // $image = get_sub_field('mobile');
+          foreach ($mobile as $image) {
+            echo wp_get_attachment_image($image, "full", '', ['alt' => 'image']);
+          }
           ?>
-            <?php if ($image) : ?>
-              <div class="swiper-slide desktop__image">
-                <?php
-                $alt_text = get_post_meta($image, '_wp_attachment_image_alt', true);
-                echo wp_get_attachment_image($image, "full", '', ['alt' => $alt_text]);
-                ?>
-              </div>
-            <?php endif; ?>
-          <?php endwhile; ?>
+
+
 
         </div>
       </div>
